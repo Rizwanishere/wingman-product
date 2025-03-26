@@ -48,7 +48,6 @@ export default {
           darkPurple: '#1e40af',
           lightPurple: '#93c5fd',
           lavender: '#bfdbfe',
-          teal: '#1bb8d0',
           lightGray: '#fafafb',
           mediumGray: '#cacbdc',
           lime: '#aabb34',

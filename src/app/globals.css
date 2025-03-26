@@ -16,7 +16,7 @@
     --secondary-foreground: 0 0% 100%;
     --muted: 217 91% 83%;
     --muted-foreground: 217 91% 32%;
-    --accent: 187 75% 46%;
+    --accent: 217 91% 60%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 20% 98%;
@@ -44,7 +44,7 @@
     --secondary-foreground: 217 91% 32%;
     --muted: 217 91% 48%;
     --muted-foreground: 0 0% 100%;
-    --accent: 187 75% 46%;
+    --accent: 217 91% 60%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 100%;
@@ -71,7 +71,7 @@
 /* Custom Strata Font Styles */
 @layer components {
   .gradient-bg {
-    @apply bg-gradient-to-br from-strata-darkPurple via-strata-purple to-strata-teal;
+    @apply bg-gradient-to-br from-strata-darkPurple via-strata-purple to-strata-lightPurple;
   }
 
   .hero-heading {

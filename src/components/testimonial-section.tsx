@@ -10,7 +10,7 @@ interface TestimonialProps {
   author: string;
   role?: string;
   companyName?: string;
-  colorScheme?: "purple" | "teal";
+  colorScheme?: "blue" | "lightBlue";
 }
 
 const Testimonial = ({
@@ -18,11 +18,11 @@ const Testimonial = ({
   author,
   role,
   companyName,
-  colorScheme = "purple"
+  colorScheme = "blue"
 }: TestimonialProps) => {
-  const bgColor = colorScheme === "purple"
+  const bgColor = colorScheme === "blue"
     ? "bg-strata-purple"
-    : "bg-strata-teal";
+    : "bg-strata-lightPurple";
 
   return (
     <motion.div
@@ -69,7 +69,7 @@ const TestimonialSection = () => {
           <Testimonial
             quote="An identity fabric is an evolution of an organization's IAM infrastructure that is architected to enable identity-first security. Without identity as the fabric, zero-trust is an aspiration."
             author="Gartner"
-            colorScheme="purple"
+            colorScheme="blue"
           />
         </AnimatedSection>
       </div>

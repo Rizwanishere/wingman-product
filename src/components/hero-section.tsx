@@ -68,7 +68,7 @@ const HeroSection = () => {
 
       {/* Background elements */}
       <div className="absolute top-1/4 right-0 w-64 h-64 bg-strata-purple/5 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-1/4 left-0 w-72 h-72 bg-strata-teal/5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-1/4 left-0 w-72 h-72 bg-strata-lightPurple/5 rounded-full blur-3xl"></div>
     </section>
   );
 };
