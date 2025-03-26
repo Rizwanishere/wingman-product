@@ -1,46 +1,65 @@
 import HeroSection from "@/components/hero-section";
-import FeaturedCard from "@/components/featured-card";
-import FeaturesSection from "@/components/features-section";
-import TestimonialSection from "@/components/testimonial-section";
-import UseCasesSection from "@/components/use-cases-section";
-import ClientsSection from "@/components/clients-section";
+import CaseStudiesSection from "@/components/case-studies-section";
+import PartnersSection from "@/components/partners-section";
 import CtaSection from "@/components/cta-section";
+import RoadmapSection from "@/components/roadmap-section";
+import ScrollableCardsSection from "@/components/scrollable-cards-section";
+import FaqSection from "@/components/faq-section";
+import LatestNewsSection from "@/components/latest-news-section";
+import FeatureCardSection from "@/components/feature-card-section";
+import ContactSection from "@/components/contact-section";
+import LargeWideBanner from "@/components/large-wide-banner";
+import ServicesSection from "@/components/services-section";
 
 export default function Home() {
   return (
     <>
-      {/* Hero Section */}
+      {/* Hero Section - Landing Page */}
       <HeroSection />
 
-      {/* Featured Content Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <FeaturedCard
-            title="Your Must-Read on Identity Orchestration"
-            rating="4.5"
-            description="You'll walk away with a clear idea of how orchestration makes the identity fabric possible, why you need a custom fabric to reach Zero Trust Goals, and how the Maverics Identity Platform can help you get started. (Plus a lot of other great things.)"
-            ctaText="Get report"
-            ctaLink="/whitepaper"
-            currentIndex={1}
-            totalSlides={3}
-          />
-        </div>
-      </section>
+      {/* Large Wide Banner */}
+      <LargeWideBanner />
 
-      {/* Features Section */}
-      <FeaturesSection />
+      {/* Left text with right scrollable cards */}
+      <ScrollableCardsSection
+        imageOnRight={true}
+        title="Our Solutions"
+        subtitle="Discover how Wingman can transform your business"
+      />
 
-      {/* Testimonial Section */}
-      <TestimonialSection />
+      {/* Case Studies Section */}
+      <CaseStudiesSection />
 
-      {/* Use Cases Section */}
-      <UseCasesSection />
+      {/* Right text with left scrollable cards */}
+      <ScrollableCardsSection
+        imageOnRight={false}
+        title="Key Benefits"
+        subtitle="See how our clients benefit from our services"
+      />
 
-      {/* Clients Section */}
-      <ClientsSection />
+      {/* Services Section */}
+      <ServicesSection />
 
-      {/* CTA Section */}
+      {/* Roadmap Section */}
+      <RoadmapSection />
+
+      {/* Latest News Section */}
+      <LatestNewsSection />
+
+      {/* FAQ Section */}
+      <FaqSection />
+
+      {/* Feature Card Section - Two wide cards with alternating layout */}
+      <FeatureCardSection />
+
+      {/* Partners Section */}
+      <PartnersSection />
+
+      {/* CTA Section - Experience the platform */}
       <CtaSection />
+
+      {/* Contact Section */}
+      <ContactSection />
     </>
   );
 }

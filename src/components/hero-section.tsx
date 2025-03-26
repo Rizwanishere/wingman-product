@@ -1,95 +1,69 @@
 "use client";
 
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import { useState } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
-import { fadeDown, fadeIn, fadeUp } from "@/lib/animation";
-import { AnimatedSection, AnimatedText } from "./ui/animated-section";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="gradient-bg py-16 md:py-24 relative overflow-hidden">
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-3xl text-center mx-auto">
-          <AnimatedSection variants={fadeDown(0.2)}>
-            <h1 className="hero-heading mb-6">
-              Identity software built to end fragmentation and unify access
-            </h1>
-          </AnimatedSection>
-
-          <AnimatedText
-            delay={0.4}
-            className="text-white/80 text-lg md:text-xl mb-8 max-w-2xl mx-auto"
-          >
-            Strata brings single sign-on to multi-IDP environments. Unify access, modernize apps still using legacy authentication, rationalize IDPs, and build resilience for the long haul.
-          </AnimatedText>
-
-          <AnimatedSection variants={fadeUp(0.6)}>
+    <section className="relative w-full min-h-[80vh] flex flex-col justify-center bg-gradient-to-r from-strata-lightGray to-white overflow-hidden">
+      <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="space-y-6">
             <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.98 }}
-              transition={{ duration: 0.2 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
             >
-              <Button
-                asChild
-                className="bg-white text-strata-darkPurple hover:bg-white/90 text-base font-medium px-6 py-6 h-auto rounded-md"
-              >
-                <Link href="/demo">
-                  Get a demo
-                </Link>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-strata-darkPurple leading-tight">
+                Empowering Your Business Growth
+              </h1>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <p className="text-lg md:text-xl text-gray-600 max-w-xl">
+                Wingman provides innovative solutions to help your business succeed in today's competitive marketplace. Our platform offers the tools and insights needed for sustainable growth.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="flex flex-wrap gap-4"
+            >
+              <Button className="bg-strata-purple hover:bg-strata-darkPurple text-white px-8 py-6 rounded-lg text-lg">
+                Get Started
+              </Button>
+              <Button variant="outline" className="border-strata-purple text-strata-purple hover:bg-strata-purple/10 px-8 py-6 rounded-lg text-lg">
+                Learn More
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </motion.div>
-          </AnimatedSection>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="relative h-[400px] lg:h-[500px] rounded-xl shadow-2xl overflow-hidden"
+          >
+            <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
+              <p className="text-gray-500 text-center px-4">Hero image placeholder</p>
+            </div>
+          </motion.div>
         </div>
-
-        {/* Client logos */}
-        <AnimatedSection
-          variants={fadeIn(0.8)}
-          className="mt-16 flex flex-wrap justify-center items-center gap-8 md:gap-12"
-        >
-          {[1, 2, 3, 4].map((index) => (
-            <motion.div
-              key={index}
-              className="w-24 h-12 relative"
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.2 }}
-            >
-              <svg viewBox="0 0 100 50" className="w-full h-full opacity-80">
-                <text x="5" y="30" fontSize="16" fontWeight="bold" fill="#ffffff">CLIENT {index}</text>
-              </svg>
-            </motion.div>
-          ))}
-        </AnimatedSection>
       </div>
 
-      {/* Background decorative elements */}
-      <div className="absolute inset-0 opacity-10">
-        <motion.div
-          className="absolute top-0 left-0 w-64 h-64 rounded-full bg-strata-purple blur-3xl"
-          animate={{
-            x: [0, 10, 0],
-            y: [0, 15, 0],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            repeatType: "reverse",
-          }}
-        />
-        <motion.div
-          className="absolute bottom-0 right-0 w-64 h-64 rounded-full bg-strata-teal blur-3xl"
-          animate={{
-            x: [0, -15, 0],
-            y: [0, -10, 0],
-          }}
-          transition={{
-            duration: 7,
-            repeat: Infinity,
-            repeatType: "reverse",
-            delay: 1,
-          }}
-        />
-      </div>
+      {/* Background elements */}
+      <div className="absolute top-1/4 right-0 w-64 h-64 bg-strata-purple/5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-1/4 left-0 w-72 h-72 bg-strata-teal/5 rounded-full blur-3xl"></div>
     </section>
   );
 };

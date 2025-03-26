@@ -58,7 +58,7 @@ const Header = () => {
         <Link href="/" className="flex items-center z-20">
           <div className="relative w-28 h-8 sm:w-32 sm:h-8">
             <svg viewBox="0 0 100 20" className="w-full h-full">
-              <text x="0" y="16" fontSize="18" fontWeight="bold" fill="#3a346c">STRATA</text>
+              <text x="0" y="16" fontSize="18" fontWeight="bold" fill="#3a346c">Wingman</text>
             </svg>
           </div>
         </Link>
@@ -67,42 +67,68 @@ const Header = () => {
         <div className="hidden lg:flex">
           <NavigationMenu>
             <NavigationMenuList>
-              {/* Platform Menu */}
+              {/* About Us */}
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="text-strata-darkPurple">Platform</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <div className="grid gap-3 p-6 w-[400px] md:w-[500px] lg:w-[600px]">
-                    <div className="grid grid-cols-1 gap-3">
-                      <h3 className="font-semibold text-strata-darkPurple">Platform</h3>
-                      <Link href="/platform" className="group flex h-auto w-full items-center rounded-md px-3 py-2 hover:bg-gray-100">
-                        <div>
-                          <h4 className="font-medium text-strata-darkPurple">Maverics Platform</h4>
-                          <p className="text-sm text-gray-600">The foundation for integrating multi-vendor identity, bridging silos, and unifying access</p>
-                        </div>
-                      </Link>
-                    </div>
-
-                    <div className="grid grid-cols-1 gap-3">
-                      <h3 className="font-semibold text-strata-darkPurple">Products</h3>
-                      <Link href="/identity-orchestration" className="group flex h-auto w-full items-center rounded-md px-3 py-2 hover:bg-gray-100">
-                        <div>
-                          <h4 className="font-medium text-strata-darkPurple">Identity Orchestration</h4>
-                          <p className="text-sm text-gray-600">Seamlessly unify authentication and authorization across all web apps</p>
-                        </div>
-                      </Link>
-                      <Link href="/identity-continuity" className="group flex h-auto w-full items-center rounded-md px-3 py-2 hover:bg-gray-100">
-                        <div>
-                          <h4 className="font-medium text-strata-darkPurple">Identity Continuity</h4>
-                          <p className="text-sm text-gray-600">Build resilience with run-time failover between IDPs to maintain access to critical apps</p>
-                        </div>
-                      </Link>
-                    </div>
-                  </div>
-                </NavigationMenuContent>
+                <Link href="/about" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    About Us
+                  </NavigationMenuLink>
+                </Link>
               </NavigationMenuItem>
 
-              {/* Other menu items remain the same */}
-              {/* ... existing code ... <other navigation menu items> */}
+              {/* Why Wingman */}
+              <NavigationMenuItem>
+                <Link href="/why-wingman" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    Why Wingman
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+
+              {/* Features */}
+              <NavigationMenuItem>
+                <Link href="/features" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    Features
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+
+              {/* Roadmap */}
+              <NavigationMenuItem>
+                <Link href="/roadmap" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    Roadmap
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+
+              {/* Services */}
+              <NavigationMenuItem>
+                <Link href="/services" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    Services
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+
+              {/* Partners */}
+              <NavigationMenuItem>
+                <Link href="/partners" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    Partners
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+
+              {/* Contact Us */}
+              <NavigationMenuItem>
+                <Link href="/contact" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    Contact Us
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
         </div>
@@ -114,7 +140,7 @@ const Header = () => {
             whileTap={{ scale: 0.95 }}
           >
             <Button className="bg-strata-purple hover:bg-strata-darkPurple text-white">
-              Get a demo
+              Book a Demo
             </Button>
           </motion.div>
         </div>
@@ -153,137 +179,32 @@ const Header = () => {
           >
             <div className="container mx-auto px-4 py-6 h-full overflow-y-auto">
               <div className="flex flex-col space-y-4">
-                {/* Platform Submenu */}
-                <div className="border-b pb-2">
-                  <button
-                    onClick={() => toggleMobileSubmenu('platform')}
-                    className="w-full flex justify-between items-center py-3 font-medium text-strata-darkPurple"
-                  >
-                    <span>Platform</span>
-                    <span className="transition-transform duration-200">
-                      {mobileSubmenu === 'platform' ? <ChevronDown size={20} /> : <ChevronRight size={20} />}
-                    </span>
-                  </button>
-                  <AnimatePresence>
-                    {mobileSubmenu === 'platform' && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: 'auto', opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="overflow-hidden"
-                      >
-                        <div className="ml-4 my-2 flex flex-col space-y-3 pb-2">
-                          <Link href="/platform" className="block py-2 text-gray-600">Maverics Platform</Link>
-                          <Link href="/identity-orchestration" className="block py-2 text-gray-600">Identity Orchestration</Link>
-                          <Link href="/identity-continuity" className="block py-2 text-gray-600">Identity Continuity</Link>
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-
-                {/* Recipes Submenu */}
-                <div className="border-b pb-2">
-                  <button
-                    onClick={() => toggleMobileSubmenu('recipes')}
-                    className="w-full flex justify-between items-center py-3 font-medium text-strata-darkPurple"
-                  >
-                    <span>Recipes</span>
-                    <span className="transition-transform duration-200">
-                      {mobileSubmenu === 'recipes' ? <ChevronDown size={20} /> : <ChevronRight size={20} />}
-                    </span>
-                  </button>
-                  <AnimatePresence>
-                    {mobileSubmenu === 'recipes' && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: 'auto', opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="overflow-hidden"
-                      >
-                        <div className="ml-4 my-2 flex flex-col space-y-3 pb-2">
-                          <Link href="/recipes" className="block py-2 text-gray-600">Orchestration Recipes</Link>
-                          <Link href="/cookbooks" className="block py-2 text-gray-600">Orchestration Cookbooks</Link>
-                          <Link href="/what-are-identity-orchestration-recipes" className="block py-2 text-gray-600">What are Orchestration Recipes?</Link>
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-
-                {/* Company Submenu */}
-                <div className="border-b pb-2">
-                  <button
-                    onClick={() => toggleMobileSubmenu('company')}
-                    className="w-full flex justify-between items-center py-3 font-medium text-strata-darkPurple"
-                  >
-                    <span>Company</span>
-                    <span className="transition-transform duration-200">
-                      {mobileSubmenu === 'company' ? <ChevronDown size={20} /> : <ChevronRight size={20} />}
-                    </span>
-                  </button>
-                  <AnimatePresence>
-                    {mobileSubmenu === 'company' && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: 'auto', opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="overflow-hidden"
-                      >
-                        <div className="ml-4 my-2 flex flex-col space-y-3 pb-2">
-                          <Link href="/company" className="block py-2 text-gray-600">About</Link>
-                          <Link href="/partners" className="block py-2 text-gray-600">Partners</Link>
-                          <Link href="/careers" className="block py-2 text-gray-600">Careers</Link>
-                          <Link href="/media-kit" className="block py-2 text-gray-600">Media Kit</Link>
-                          <Link href="/news" className="block py-2 text-gray-600">In the news</Link>
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-
-                {/* Resources Submenu */}
-                <div className="border-b pb-2">
-                  <button
-                    onClick={() => toggleMobileSubmenu('resources')}
-                    className="w-full flex justify-between items-center py-3 font-medium text-strata-darkPurple"
-                  >
-                    <span>Resources</span>
-                    <span className="transition-transform duration-200">
-                      {mobileSubmenu === 'resources' ? <ChevronDown size={20} /> : <ChevronRight size={20} />}
-                    </span>
-                  </button>
-                  <AnimatePresence>
-                    {mobileSubmenu === 'resources' && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: 'auto', opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="overflow-hidden"
-                      >
-                        <div className="ml-4 my-2 flex flex-col space-y-3 pb-2">
-                          <Link href="/resources" className="block py-2 text-gray-600">Resource Center</Link>
-                          <Link href="/whitepapers" className="block py-2 text-gray-600">Whitepapers</Link>
-                          <Link href="/blog" className="block py-2 text-gray-600">Blog</Link>
-                          <Link href="/glossary" className="block py-2 text-gray-600">Glossary</Link>
-                          <Link href="/docs" className="block py-2 text-gray-600">Docs</Link>
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-
-                <Link href="/customers" className="py-3 font-medium text-strata-darkPurple block border-b pb-2">
-                  Customers
+                {/* Mobile menu items */}
+                <Link href="/about" className="py-3 font-medium text-strata-darkPurple block border-b pb-2">
+                  About Us
+                </Link>
+                <Link href="/why-wingman" className="py-3 font-medium text-strata-darkPurple block border-b pb-2">
+                  Why Wingman
+                </Link>
+                <Link href="/features" className="py-3 font-medium text-strata-darkPurple block border-b pb-2">
+                  Features
+                </Link>
+                <Link href="/roadmap" className="py-3 font-medium text-strata-darkPurple block border-b pb-2">
+                  Roadmap
+                </Link>
+                <Link href="/services" className="py-3 font-medium text-strata-darkPurple block border-b pb-2">
+                  Services
+                </Link>
+                <Link href="/partners" className="py-3 font-medium text-strata-darkPurple block border-b pb-2">
+                  Partners
+                </Link>
+                <Link href="/contact" className="py-3 font-medium text-strata-darkPurple block border-b pb-2">
+                  Contact Us
                 </Link>
 
                 <div className="pt-4">
                   <Button className="bg-strata-purple hover:bg-strata-darkPurple text-white w-full">
-                    Get a demo
+                    Book a Demo
                   </Button>
                 </div>
               </div>
