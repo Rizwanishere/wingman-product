@@ -55,9 +55,13 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="relative h-[400px] lg:h-[500px] rounded-xl shadow-2xl overflow-hidden"
           >
-            <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
-              <p className="text-gray-500 text-center px-4">Hero image placeholder</p>
-            </div>
+            <Image 
+              src="https://www.reuters.com/resizer/v2/SL2P2E7RJNGXVEG7EF42ID72JQ.png?auth=54e3ba27aee5af0abef4d5f67fa397276201993aed0d1a8ee311b0c87628b6cf&width=1098&quality=80"
+              alt="Cybersecurity Hero Image"
+              layout="fill"
+              objectFit="cover"
+              className="rounded-xl"
+            />
           </motion.div>
         </div>
       </div>
