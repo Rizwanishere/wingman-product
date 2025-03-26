@@ -17,10 +17,10 @@ const CtaSection = () => {
         >
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Experience the Wingman Platform
+              Experience the platform
             </h2>
             <p className="text-lg md:text-xl text-white/80 mb-8">
-              Transform your business with our comprehensive solution suite. Book a personalized demo today and discover how Wingman can help you achieve your business goals.
+              See how our intelligent, distributed cybersecurity platform harnesses the power of data and AI to protect your organization now and in the future.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.div

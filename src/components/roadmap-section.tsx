@@ -6,57 +6,82 @@ const RoadmapSection = () => {
   const roadmapItems = [
     {
       id: 1,
-      year: "2023 Q4",
-      title: "Platform Launch",
-      description: "Initial release of the Wingman platform with core functionality.",
+      phase: "ID - I",
+      title: "Initial Development",
+      description: "Starting the foundation of Wingman platform.",
       features: [
-        "User management system",
-        "Basic analytics dashboard",
-        "Integration capabilities",
+        "MVP development",
+        "Basic testing",
+        "Market analysis",
       ]
     },
     {
       id: 2,
-      year: "2024 Q1",
-      title: "Enhanced Analytics",
-      description: "Powerful new analytics features to provide deeper insights.",
+      phase: "ID - II",
+      title: "Platform Enhancement",
+      description: "Strengthening the core capabilities of the platform.",
       features: [
-        "Advanced reporting tools",
-        "Custom dashboards",
-        "Predictive analytics",
+        "System scalability",
+        "Fault tolerance",
+        "UXP integration",
       ]
     },
     {
       id: 3,
-      year: "2024 Q2",
-      title: "Mobile Experience",
-      description: "Dedicated mobile applications for iOS and Android platforms.",
+      phase: "ID - III",
+      title: "Mobile & Analytics",
+      description: "Expanding platform capabilities to mobile and advanced analytics.",
       features: [
-        "Native mobile apps",
-        "Offline functionality",
-        "Push notifications",
+        "Mobile support",
+        "Analytics",
       ]
     },
     {
       id: 4,
-      year: "2024 Q3",
-      title: "Enterprise Solutions",
-      description: "Expanded feature set for enterprise-level customers.",
+      phase: "Milestone - I",
+      title: "First Release",
+      description: "Initial platform launch for select users.",
       features: [
-        "Advanced security protocols",
-        "Custom workflow builder",
-        "Enterprise API access",
+        "Beta testing",
+        "Soft launch",
       ]
     },
     {
       id: 5,
-      year: "2024 Q4",
-      title: "Global Expansion",
-      description: "Extending platform availability to new markets worldwide.",
+      phase: "Post ID - I",
+      title: "Communication Enhancement",
+      description: "Adding notification capabilities to the platform.",
       features: [
-        "Multi-language support",
-        "Regional compliance features",
-        "Localized content delivery",
+        "Notification service",
+      ]
+    },
+    {
+      id: 6,
+      phase: "Post ID - II",
+      title: "AI Integration",
+      description: "Integrating advanced AI capabilities.",
+      features: [
+        "AI",
+        "Content generation",
+      ]
+    },
+    {
+      id: 7,
+      phase: "Milestone - II",
+      title: "SAAS Launch",
+      description: "Public launch of the platform as a SaaS offering.",
+      features: [
+        "Beta testing",
+        "SAAS launch",
+      ]
+    },
+    {
+      id: 8,
+      phase: "Milestone - III",
+      title: "Commercial Growth",
+      description: "Expanding market presence and commercial operations.",
+      features: [
+        "Marketing & Sales",
       ]
     }
   ];
@@ -75,7 +100,7 @@ const RoadmapSection = () => {
             Product Roadmap
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Our vision for the future and the exciting features we're developing for the Wingman platform.
+            Our comprehensive development strategy for Wingman, showing major milestones and implementation phases.
           </p>
         </motion.div>
 
@@ -89,7 +114,7 @@ const RoadmapSection = () => {
                 key={item.id}
                 className="relative mb-16 last:mb-0"
               >
-                {/* Year label */}
+                {/* Phase label */}
                 <motion.div
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
@@ -97,7 +122,7 @@ const RoadmapSection = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="absolute left-1/2 transform -translate-x-1/2 -top-2 mb-4 bg-strata-purple text-white px-4 py-1 rounded-full text-sm font-medium"
                 >
-                  {item.year}
+                  {item.phase}
                 </motion.div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-12">

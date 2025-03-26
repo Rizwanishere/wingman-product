@@ -27,7 +27,7 @@ const Footer = () => {
               </svg>
             </div>
             <p className="text-white/70 mb-6">
-              Empowering businesses through innovative solutions and strategic insights for sustainable growth and success.
+              Experience lightning – fast response times and exceptional reliability for a secure and protected online journey.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-white/70 hover:text-white transition-colors">
@@ -63,8 +63,8 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/features" className="text-white/70 hover:text-white transition-colors">
-                  Features
+                <Link href="/feather" className="text-white/70 hover:text-white transition-colors">
+                  Feather
                 </Link>
               </li>
               <li>
@@ -126,24 +126,16 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-6">Contact Us</h3>
             <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <MapPin className="text-strata-purple mt-1" size={18} />
-                <span className="text-white/70">
-                  123 Business Avenue<br />
-                  San Francisco, CA 94105<br />
-                  United States
-                </span>
-              </li>
               <li className="flex items-center gap-3">
-                <Phone className="text-strata-purple" size={18} />
-                <a href="tel:+18001234567" className="text-white/70 hover:text-white transition-colors">
-                  +1 (800) 123-4567
+                <Mail className="text-strata-purple" size={18} />
+                <a href="mailto:support@wingmanproduct.com" className="text-white/70 hover:text-white transition-colors">
+                  support@wingmanproduct.com
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="text-strata-purple" size={18} />
-                <a href="mailto:contact@wingman.com" className="text-white/70 hover:text-white transition-colors">
-                  contact@wingman.com
+                <a href="mailto:demo@wingmanproduct.com" className="text-white/70 hover:text-white transition-colors">
+                  demo@wingmanproduct.com
                 </a>
               </li>
             </ul>

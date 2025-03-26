@@ -14,25 +14,22 @@ const LargeWideBanner = () => {
           className="bg-gradient-to-r from-strata-purple/90 to-strata-darkPurple rounded-xl overflow-hidden shadow-xl"
         >
           <div className="p-8 md:p-12 lg:p-16">
-            <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Revolutionize Your Business with Wingman
-              </h2>
+            <div className="max-w-3xl mx-auto">
               <p className="text-lg text-white/80 mb-8">
-                Our comprehensive platform empowers businesses of all sizes to overcome challenges, identify opportunities, and achieve sustainable growth. Join thousands of satisfied customers who've transformed their operations with our cutting-edge solutions.
+                After delivering a fraud aversion platform that prevented $26 Million of fraud in the first year of launch, our team realized the contribution we can make for digital identity space. There being a clear gap between identity management solution and fraud prevention with no product on market offering all-round support for, pre, post auth fraud prevention and multi factor authentication features. We decided to create Wingman (powered by Feather): Wingman is a AI powered distributed computing platform for identity safeguarding and fraud prevention. It is capable of processing with high speed, accuracy, reliability and exhibits tremendous adaptability.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-5 text-center w-full md:w-[calc(33%-1rem)]">
-                  <h3 className="text-3xl font-bold text-white mb-2">98%</h3>
-                  <p className="text-white/80">Customer Satisfaction</p>
+                  <h3 className="text-2xl font-bold text-white mb-2">Security</h3>
+                  <p className="text-white/80">Our security systems utilize Distributed computing, Artificial Intelligence, and Distributed ledger technology to identify and neutralize threats in real-time.</p>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-5 text-center w-full md:w-[calc(33%-1rem)]">
-                  <h3 className="text-3xl font-bold text-white mb-2">5,000+</h3>
-                  <p className="text-white/80">Businesses Served</p>
+                  <h3 className="text-2xl font-bold text-white mb-2">Protection</h3>
+                  <p className="text-white/80">In today's digital world, ensuring the security of your personal and professional information is paramount.</p>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-5 text-center w-full md:w-[calc(33%-1rem)]">
-                  <h3 className="text-3xl font-bold text-white mb-2">24/7</h3>
-                  <p className="text-white/80">Expert Support</p>
+                  <h3 className="text-2xl font-bold text-white mb-2">Innovation</h3>
+                  <p className="text-white/80">Our patented approach uses interrupt driven orchestration with gaming theory's observability pattern for data routing.</p>
                 </div>
               </div>
             </div>

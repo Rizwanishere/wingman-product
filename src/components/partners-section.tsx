@@ -3,8 +3,8 @@
 import { motion } from "framer-motion";
 
 const PartnersSection = () => {
-  // Create an array of 8 partners
-  const partners = Array.from({ length: 8 }, (_, i) => ({
+  // Create an array of 6 partners
+  const partners = Array.from({ length: 6 }, (_, i) => ({
     id: i + 1,
     name: `Partner ${i + 1}`
   }));
@@ -20,14 +20,14 @@ const PartnersSection = () => {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-strata-darkPurple mb-4">
-            Our Partners
+            Our Trusted Partners
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            We collaborate with industry leaders to deliver exceptional solutions for our clients.
+            On this tech innovation journey to be a global leader in cutting-edge technology solutions. Here are some organizations that support our cause.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-10">
           {partners.map((partner, index) => (
             <motion.div
               key={partner.id}

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   NavigationMenu,
@@ -85,11 +85,11 @@ const Header = () => {
                 </Link>
               </NavigationMenuItem>
 
-              {/* Features */}
+              {/* Feather */}
               <NavigationMenuItem>
-                <Link href="/features" legacyBehavior passHref>
+                <Link href="/feather" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    Features
+                    Feather
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
@@ -186,8 +186,8 @@ const Header = () => {
                 <Link href="/why-wingman" className="py-3 font-medium text-strata-darkPurple block border-b pb-2">
                   Why Wingman
                 </Link>
-                <Link href="/features" className="py-3 font-medium text-strata-darkPurple block border-b pb-2">
-                  Features
+                <Link href="/feather" className="py-3 font-medium text-strata-darkPurple block border-b pb-2">
+                  Feather
                 </Link>
                 <Link href="/roadmap" className="py-3 font-medium text-strata-darkPurple block border-b pb-2">
                   Roadmap

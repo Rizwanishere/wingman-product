@@ -18,7 +18,8 @@ const HeroSection = () => {
               transition={{ duration: 0.6 }}
             >
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-strata-darkPurple leading-tight">
-                Empowering Your Business Growth
+                World's-Leading<br/>
+                Cybersecurity
               </h1>
             </motion.div>
 
@@ -28,7 +29,7 @@ const HeroSection = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <p className="text-lg md:text-xl text-gray-600 max-w-xl">
-                Wingman provides innovative solutions to help your business succeed in today's competitive marketplace. Our platform offers the tools and insights needed for sustainable growth.
+                Experience lightning - fast response times and exceptional reliability for a secure and protected online journey.
               </p>
             </motion.div>
 

@@ -8,24 +8,17 @@ const LatestNewsSection = () => {
   const newsItems = [
     {
       id: 1,
-      title: "Wingman Launches New Enterprise Solution",
+      title: "Synthetic Fraud Detection",
       date: "March 15, 2024",
-      excerpt: "Our latest enterprise solution provides advanced security features and enhanced customization options...",
-      category: "Product Update"
+      excerpt: "Synthetic identity fraud is a type of identity theft in which a criminal combines both real and fake personal information to create a new, fictious identity that can then be used for various identity-related schemes, such as credit card fraud, bank fraud, and more.",
+      category: "Security Insights"
     },
     {
       id: 2,
-      title: "Expanding Our Global Reach",
+      title: "Understanding Social Engineering",
       date: "February 28, 2024",
-      excerpt: "We're excited to announce our expansion into new markets with dedicated regional support teams...",
-      category: "Company News"
-    },
-    {
-      id: 3,
-      title: "The Future of Business Analytics",
-      date: "February 10, 2024",
-      excerpt: "Discover how advanced analytics are transforming business decision-making processes...",
-      category: "Industry Insights"
+      excerpt: "Social engineering is a dangerous weapon many cybercriminals use to achieve their nefarious goals. It leverages psychological manipulation to deceive individuals into divulging confidential or personal information.",
+      category: "Cyber Threats"
     }
   ];
 
@@ -43,11 +36,11 @@ const LatestNewsSection = () => {
             Latest News
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Stay updated with the latest developments, product updates, and industry insights.
+            See what's happening in the Identity and Security sector right now
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {newsItems.map((item, index) => (
             <motion.div
               key={item.id}
