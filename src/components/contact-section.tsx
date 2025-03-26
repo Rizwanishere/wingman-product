@@ -129,7 +129,7 @@ const ContactSection = () => {
             <div className="bg-strata-purple rounded-xl shadow-md p-8 text-white">
               <h3 className="text-xl font-semibold mb-4">Need Immediate Assistance?</h3>
               <p className="mb-6">Our cybersecurity experts are available to help you with any questions or security concerns.</p>
-              <Button variant="outline" className="border-white text-white hover:bg-white/10 w-full">
+              <Button variant="outline" className="border-white text-strata-darkPurple hover:bg-white/10 w-full">
                 Chat With Support
               </Button>
             </div>

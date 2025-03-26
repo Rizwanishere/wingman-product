@@ -36,7 +36,7 @@ const CtaSection = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Button variant="outline" className="border-white text-white hover:bg-white/10 w-full sm:w-auto text-lg px-8 py-6 h-auto">
+                <Button variant="outline" className="bg-white text-strata-darkPurple hover:bg-white/90 w-full sm:w-auto text-lg px-8 py-6 h-auto">
                   Learn More
                 </Button>
               </motion.div>

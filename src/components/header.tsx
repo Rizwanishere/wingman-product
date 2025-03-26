@@ -57,11 +57,12 @@ const Header = () => {
         {/* Logo */}
         <Link href="/" className="flex items-center z-20">
           <div className="relative w-28 h-8 sm:w-32 sm:h-8">
-            <svg viewBox="0 0 100 20" className="w-full h-full">
-              <text x="0" y="16" fontSize="18" fontWeight="bold" fill="#3a346c">Wingman</text>
-            </svg>
+            <span className="text-strata-darkPurple font-bold text-xl sm:text-2xl">
+              Wingman
+            </span>
           </div>
         </Link>
+
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex">
