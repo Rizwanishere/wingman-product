@@ -14,6 +14,7 @@ import {
   navigationMenuTriggerStyle
 } from "@/components/ui/navigation-menu";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -56,10 +57,14 @@ const Header = () => {
       <div className="container mx-auto px-4 py-3 md:py-4 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center z-20">
-          <div className="relative w-28 h-8 sm:w-32 sm:h-8">
-            <span className="text-strata-darkPurple font-bold text-xl sm:text-2xl">
-              Wingman
-            </span>
+          <div className="relative w-48 h-12 sm:w-48 sm:h-12">
+            <Image
+              src="/wingmanLogo.png"
+              alt="Wingman Logo"
+              fill
+              className="object-contain"
+              priority
+            />
           </div>
         </Link>
 
@@ -91,15 +96,6 @@ const Header = () => {
                 <Link href="/feather" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     Feather
-                  </NavigationMenuLink>
-                </Link>
-              </NavigationMenuItem>
-
-              {/* Roadmap */}
-              <NavigationMenuItem>
-                <Link href="/roadmap" legacyBehavior passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    Roadmap
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
@@ -140,7 +136,7 @@ const Header = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <Button className="bg-strata-purple hover:bg-strata-darkPurple text-white">
+            <Button className="bg-strata-blue hover:bg-strata-darkBlue text-white">
               Book a Demo
             </Button>
           </motion.div>
@@ -150,7 +146,7 @@ const Header = () => {
         <div className="lg:hidden z-20">
           <button
             onClick={toggleMenu}
-            className="text-strata-darkPurple p-2"
+            className="text-strata-darkBlue p-2"
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           >
             <AnimatePresence mode="wait">
@@ -181,30 +177,27 @@ const Header = () => {
             <div className="container mx-auto px-4 py-6 h-full overflow-y-auto">
               <div className="flex flex-col space-y-4">
                 {/* Mobile menu items */}
-                <Link href="/about" className="py-3 font-medium text-strata-darkPurple block border-b pb-2">
+                <Link href="/about" className="py-3 font-medium text-strata-darkBlue block border-b pb-2">
                   About Us
                 </Link>
-                <Link href="/why-wingman" className="py-3 font-medium text-strata-darkPurple block border-b pb-2">
+                <Link href="/why-wingman" className="py-3 font-medium text-strata-darkBlue block border-b pb-2">
                   Why Wingman
                 </Link>
-                <Link href="/feather" className="py-3 font-medium text-strata-darkPurple block border-b pb-2">
+                <Link href="/feather" className="py-3 font-medium text-strata-darkBlue block border-b pb-2">
                   Feather
                 </Link>
-                <Link href="/roadmap" className="py-3 font-medium text-strata-darkPurple block border-b pb-2">
-                  Roadmap
-                </Link>
-                <Link href="/services" className="py-3 font-medium text-strata-darkPurple block border-b pb-2">
+                <Link href="/services" className="py-3 font-medium text-strata-darkBlue block border-b pb-2">
                   Services
                 </Link>
-                <Link href="/partners" className="py-3 font-medium text-strata-darkPurple block border-b pb-2">
+                <Link href="/partners" className="py-3 font-medium text-strata-darkBlue block border-b pb-2">
                   Partners
                 </Link>
-                <Link href="/contact" className="py-3 font-medium text-strata-darkPurple block border-b pb-2">
+                <Link href="/contact" className="py-3 font-medium text-strata-darkBlue block border-b pb-2">
                   Contact Us
                 </Link>
 
                 <div className="pt-4">
-                  <Button className="bg-strata-purple hover:bg-strata-darkPurple text-white w-full">
+                  <Button className="bg-strata-blue hover:bg-strata-darkBlue text-white w-full">
                     Book a Demo
                   </Button>
                 </div>

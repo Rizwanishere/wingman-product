@@ -93,7 +93,7 @@ const ScrollableCardsSection = ({ imageOnRight, title, subtitle }: ScrollableCar
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        <h2 className="text-3xl md:text-4xl font-bold text-strata-darkPurple">{title}</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-strata-darkBlue">{title}</h2>
       </motion.div>
 
       <motion.div
@@ -120,20 +120,20 @@ const ScrollableCardsSection = ({ imageOnRight, title, subtitle }: ScrollableCar
           {title === "Our Solutions" ? (
             <>
               <li className="flex items-start gap-2">
-                <div className="h-6 w-6 rounded-full bg-strata-purple/20 flex items-center justify-center mt-1">
-                  <div className="h-3 w-3 rounded-full bg-strata-purple"></div>
+                <div className="h-6 w-6 rounded-full bg-strata-blue/20 flex items-center justify-center mt-1">
+                  <div className="h-3 w-3 rounded-full bg-strata-blue"></div>
                 </div>
                 <p className="text-gray-700">Real-time threat detection and prevention</p>
               </li>
               <li className="flex items-start gap-2">
-                <div className="h-6 w-6 rounded-full bg-strata-purple/20 flex items-center justify-center mt-1">
-                  <div className="h-3 w-3 rounded-full bg-strata-purple"></div>
+                <div className="h-6 w-6 rounded-full bg-strata-blue/20 flex items-center justify-center mt-1">
+                  <div className="h-3 w-3 rounded-full bg-strata-blue"></div>
                 </div>
                 <p className="text-gray-700">AI-powered adaptive security measures</p>
               </li>
               <li className="flex items-start gap-2">
-                <div className="h-6 w-6 rounded-full bg-strata-purple/20 flex items-center justify-center mt-1">
-                  <div className="h-3 w-3 rounded-full bg-strata-purple"></div>
+                <div className="h-6 w-6 rounded-full bg-strata-blue/20 flex items-center justify-center mt-1">
+                  <div className="h-3 w-3 rounded-full bg-strata-blue"></div>
                 </div>
                 <p className="text-gray-700">Comprehensive fraud prevention and detection</p>
               </li>
@@ -141,20 +141,20 @@ const ScrollableCardsSection = ({ imageOnRight, title, subtitle }: ScrollableCar
           ) : (
             <>
               <li className="flex items-start gap-2">
-                <div className="h-6 w-6 rounded-full bg-strata-purple/20 flex items-center justify-center mt-1">
-                  <div className="h-3 w-3 rounded-full bg-strata-purple"></div>
+                <div className="h-6 w-6 rounded-full bg-strata-blue/20 flex items-center justify-center mt-1">
+                  <div className="h-3 w-3 rounded-full bg-strata-blue"></div>
                 </div>
                 <p className="text-gray-700">FRAUD PREVENTION CASE studies</p>
               </li>
               <li className="flex items-start gap-2">
-                <div className="h-6 w-6 rounded-full bg-strata-purple/20 flex items-center justify-center mt-1">
-                  <div className="h-3 w-3 rounded-full bg-strata-purple"></div>
+                <div className="h-6 w-6 rounded-full bg-strata-blue/20 flex items-center justify-center mt-1">
+                  <div className="h-3 w-3 rounded-full bg-strata-blue"></div>
                 </div>
                 <p className="text-gray-700">Proactive security approach that eliminates threats</p>
               </li>
               <li className="flex items-start gap-2">
-                <div className="h-6 w-6 rounded-full bg-strata-purple/20 flex items-center justify-center mt-1">
-                  <div className="h-3 w-3 rounded-full bg-strata-purple"></div>
+                <div className="h-6 w-6 rounded-full bg-strata-blue/20 flex items-center justify-center mt-1">
+                  <div className="h-3 w-3 rounded-full bg-strata-blue"></div>
                 </div>
                 <p className="text-gray-700">Continuous monitoring and dynamic response</p>
               </li>
@@ -170,7 +170,7 @@ const ScrollableCardsSection = ({ imageOnRight, title, subtitle }: ScrollableCar
         transition={{ duration: 0.5, delay: 0.3 }}
         className="pt-4"
       >
-        <Button className="bg-strata-purple hover:bg-strata-darkPurple text-white">
+        <Button className="bg-strata-blue hover:bg-strata-darkBlue text-white">
           Learn More
         </Button>
       </motion.div>
@@ -194,7 +194,7 @@ const ScrollableCardsSection = ({ imageOnRight, title, subtitle }: ScrollableCar
                   <p className="text-gray-500">Image placeholder</p>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-strata-darkPurple mb-2">{card.title}</h3>
+                  <h3 className="text-xl font-semibold text-strata-darkBlue mb-2">{card.title}</h3>
                   <p className="text-gray-600">{card.description}</p>
                 </div>
               </div>
@@ -219,7 +219,7 @@ const ScrollableCardsSection = ({ imageOnRight, title, subtitle }: ScrollableCar
             <button
               key={index}
               className={`h-2.5 w-2.5 rounded-full transition-colors ${
-                activeIndex === index ? "bg-strata-purple" : "bg-gray-300"
+                activeIndex === index ? "bg-strata-blue" : "bg-gray-300"
               }`}
               onClick={() => goToSlide(index)}
               aria-label={`Go to slide ${index + 1}`}

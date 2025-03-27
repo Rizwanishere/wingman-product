@@ -20,7 +20,7 @@ const ClientsSection = () => {
           <AnimatedHeading className="section-heading mb-2">
             We like everyone.
           </AnimatedHeading>
-          <AnimatedText delay={0.1} className="text-xl text-strata-purple font-medium">
+          <AnimatedText delay={0.1} className="text-xl text-strata-blue font-medium">
             Our identity software is truly vendor-agnostic.
           </AnimatedText>
         </div>
@@ -34,7 +34,7 @@ const ClientsSection = () => {
             viewport={{ once: true }}
           >
             Don't get locked-in. Connect every service to every app through your custom identity fabric and switch vendors when it makes sense.
-            The <span className="text-strata-purple font-medium">typical identity service turnover</span> is at least five to eight years. A fabric turns that
+            The <span className="text-strata-blue font-medium">typical identity service turnover</span> is at least five to eight years. A fabric turns that
             cycle down to 1-3 years. Build yours to stay flexible through business change.
           </motion.p>
         </AnimatedSection>

@@ -15,7 +15,7 @@ const FeatureCardSection = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-strata-darkPurple mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-strata-darkBlue mb-4">
             What Services we offer
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -36,7 +36,7 @@ const FeatureCardSection = () => {
               <p className="text-gray-500">Image placeholder</p>
             </div>
             <div className="p-8 md:p-12 flex flex-col justify-center order-1 md:order-2">
-              <h3 className="text-2xl md:text-3xl font-bold text-strata-darkPurple mb-4">
+              <h3 className="text-2xl md:text-3xl font-bold text-strata-darkBlue mb-4">
                 Integration and stack modernization
               </h3>
               <p className="text-gray-600 mb-6">
@@ -44,25 +44,25 @@ const FeatureCardSection = () => {
               </p>
               <ul className="space-y-3 mb-6">
                 <li className="flex items-start gap-2">
-                  <div className="h-6 w-6 rounded-full bg-strata-purple/20 flex items-center justify-center mt-1">
-                    <div className="h-3 w-3 rounded-full bg-strata-purple"></div>
+                  <div className="h-6 w-6 rounded-full bg-strata-blue/20 flex items-center justify-center mt-1">
+                    <div className="h-3 w-3 rounded-full bg-strata-blue"></div>
                   </div>
                   <p className="text-gray-700">Seamless system integration</p>
                 </li>
                 <li className="flex items-start gap-2">
-                  <div className="h-6 w-6 rounded-full bg-strata-purple/20 flex items-center justify-center mt-1">
-                    <div className="h-3 w-3 rounded-full bg-strata-purple"></div>
+                  <div className="h-6 w-6 rounded-full bg-strata-blue/20 flex items-center justify-center mt-1">
+                    <div className="h-3 w-3 rounded-full bg-strata-blue"></div>
                   </div>
                   <p className="text-gray-700">Legacy system modernization</p>
                 </li>
                 <li className="flex items-start gap-2">
-                  <div className="h-6 w-6 rounded-full bg-strata-purple/20 flex items-center justify-center mt-1">
-                    <div className="h-3 w-3 rounded-full bg-strata-purple"></div>
+                  <div className="h-6 w-6 rounded-full bg-strata-blue/20 flex items-center justify-center mt-1">
+                    <div className="h-3 w-3 rounded-full bg-strata-blue"></div>
                   </div>
                   <p className="text-gray-700">Improved operational efficiency</p>
                 </li>
               </ul>
-              <Button className="bg-strata-purple hover:bg-strata-darkPurple text-white self-start">
+              <Button className="bg-strata-blue hover:bg-strata-darkBlue text-white self-start">
                 Learn More
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
@@ -80,7 +80,7 @@ const FeatureCardSection = () => {
         >
           <div className="grid grid-cols-1 md:grid-cols-2">
             <div className="p-8 md:p-12 flex flex-col justify-center">
-              <h3 className="text-2xl md:text-3xl font-bold text-strata-darkPurple mb-4">
+              <h3 className="text-2xl md:text-3xl font-bold text-strata-darkBlue mb-4">
                 Wingman Product Services
               </h3>
               <p className="text-gray-600 mb-6">
@@ -88,25 +88,25 @@ const FeatureCardSection = () => {
               </p>
               <ul className="space-y-3 mb-6">
                 <li className="flex items-start gap-2">
-                  <div className="h-6 w-6 rounded-full bg-strata-purple/20 flex items-center justify-center mt-1">
-                    <div className="h-3 w-3 rounded-full bg-strata-purple"></div>
+                  <div className="h-6 w-6 rounded-full bg-strata-blue/20 flex items-center justify-center mt-1">
+                    <div className="h-3 w-3 rounded-full bg-strata-blue"></div>
                   </div>
                   <p className="text-gray-700">Custom configuration and integration</p>
                 </li>
                 <li className="flex items-start gap-2">
-                  <div className="h-6 w-6 rounded-full bg-strata-purple/20 flex items-center justify-center mt-1">
-                    <div className="h-3 w-3 rounded-full bg-strata-purple"></div>
+                  <div className="h-6 w-6 rounded-full bg-strata-blue/20 flex items-center justify-center mt-1">
+                    <div className="h-3 w-3 rounded-full bg-strata-blue"></div>
                   </div>
                   <p className="text-gray-700">Ongoing technical support</p>
                 </li>
                 <li className="flex items-start gap-2">
-                  <div className="h-6 w-6 rounded-full bg-strata-purple/20 flex items-center justify-center mt-1">
-                    <div className="h-3 w-3 rounded-full bg-strata-purple"></div>
+                  <div className="h-6 w-6 rounded-full bg-strata-blue/20 flex items-center justify-center mt-1">
+                    <div className="h-3 w-3 rounded-full bg-strata-blue"></div>
                   </div>
                   <p className="text-gray-700">Enhanced operational efficiency</p>
                 </li>
               </ul>
-              <Button className="bg-strata-purple hover:bg-strata-darkPurple text-white self-start">
+              <Button className="bg-strata-blue hover:bg-strata-darkBlue text-white self-start">
                 Contact Us
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>

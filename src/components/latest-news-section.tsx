@@ -32,7 +32,7 @@ const LatestNewsSection = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-strata-darkPurple mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-strata-darkBlue mb-4">
             Latest News
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -55,20 +55,20 @@ const LatestNewsSection = () => {
               </div>
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex justify-between items-center mb-3">
-                  <span className="text-sm font-medium px-3 py-1 bg-strata-purple/10 text-strata-purple rounded-full">
+                  <span className="text-sm font-medium px-3 py-1 bg-strata-blue/10 text-strata-blue rounded-full">
                     {item.category}
                   </span>
                   <span className="text-sm text-gray-500">
                     {item.date}
                   </span>
                 </div>
-                <h3 className="text-xl font-semibold text-strata-darkPurple mb-3">
+                <h3 className="text-xl font-semibold text-strata-darkBlue mb-3">
                   {item.title}
                 </h3>
                 <p className="text-gray-600 mb-4 flex-grow">
                   {item.excerpt}
                 </p>
-                <Button variant="link" className="text-strata-purple p-0 h-auto font-medium flex items-center">
+                <Button variant="link" className="text-strata-blue p-0 h-auto font-medium flex items-center">
                   Read More
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
@@ -84,7 +84,7 @@ const LatestNewsSection = () => {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="flex justify-center mt-12"
         >
-          <Button className="bg-strata-purple hover:bg-strata-darkPurple text-white">
+          <Button className="bg-strata-blue hover:bg-strata-darkBlue text-white">
             View All News
             <ArrowRight className="ml-2 h-4 w-4" />
           </Button>

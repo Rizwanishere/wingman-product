@@ -4,14 +4,14 @@ import { motion } from "framer-motion";
 
 const LargeWideBanner = () => {
   return (
-    <section className="py-16 md:py-24 bg-strata-darkPurple">
+    <section className="py-16 md:py-24 bg-strata-darkBlue">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="bg-gradient-to-r from-strata-purple/90 to-strata-darkPurple rounded-xl overflow-hidden shadow-xl"
+          className="bg-gradient-to-r from-strata-blue/90 to-strata-darkBlue rounded-xl overflow-hidden shadow-xl"
         >
           <div className="p-8 md:p-12 lg:p-16">
             <div className="max-w-3xl mx-auto">

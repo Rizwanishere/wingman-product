@@ -2,7 +2,6 @@ import HeroSection from "@/components/hero-section";
 import CaseStudiesSection from "@/components/case-studies-section";
 import PartnersSection from "@/components/partners-section";
 import CtaSection from "@/components/cta-section";
-import RoadmapSection from "@/components/roadmap-section";
 import ScrollableCardsSection from "@/components/scrollable-cards-section";
 import FaqSection from "@/components/faq-section";
 import LatestNewsSection from "@/components/latest-news-section";
@@ -39,9 +38,6 @@ export default function Home() {
 
       {/* Services Section */}
       <ServicesSection />
-
-      {/* Roadmap Section */}
-      <RoadmapSection />
 
       {/* Latest News Section */}
       <LatestNewsSection />

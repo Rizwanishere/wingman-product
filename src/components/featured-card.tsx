@@ -36,14 +36,14 @@ const FeaturedCard = ({
             <h3 className="sub-heading mb-4">
               {title}
               {rating && (
-                <span className="ml-2 text-strata-purple">(Rated {rating} ⭐)</span>
+                <span className="ml-2 text-strata-blue">(Rated {rating} ⭐)</span>
               )}
             </h3>
             <p className="text-gray-600 mb-6">{description}</p>
             <Button
               asChild
               variant="outline"
-              className="text-strata-purple border-strata-purple hover:bg-strata-purple/10"
+              className="text-strata-blue border-strata-blue hover:bg-strata-blue/10"
             >
               <Link href={ctaLink} className="flex items-center gap-2">
                 {ctaText}
@@ -59,7 +59,7 @@ const FeaturedCard = ({
                     key={index}
                     className={`w-2 h-2 rounded-full ${
                       index + 1 === currentIndex
-                        ? "bg-strata-purple"
+                        ? "bg-strata-blue"
                         : "bg-gray-300"
                     }`}
                   />

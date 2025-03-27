@@ -71,7 +71,7 @@
 /* Custom Strata Font Styles */
 @layer components {
   .gradient-bg {
-    @apply bg-gradient-to-br from-strata-darkPurple via-strata-purple to-strata-lightPurple;
+    @apply bg-gradient-to-br from-strata-darkBlue via-strata-blue to-strata-lightBlue;
   }
 
   .hero-heading {
@@ -79,10 +79,10 @@
   }
 
   .section-heading {
-    @apply text-3xl md:text-4xl font-bold text-strata-darkPurple;
+    @apply text-3xl md:text-4xl font-bold text-strata-darkBlue;
   }
 
   .sub-heading {
-    @apply text-xl md:text-2xl font-semibold text-strata-darkPurple;
+    @apply text-xl md:text-2xl font-semibold text-strata-darkBlue;
   }
 }

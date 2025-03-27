@@ -23,7 +23,7 @@ const FeatureCard = ({ title, description, linkText, linkHref, index = 0 }: Feat
           transition: { duration: 0.2 }
         }}
       >
-        <h3 className="text-xl font-semibold text-strata-darkPurple mb-3">{title}</h3>
+        <h3 className="text-xl font-semibold text-strata-darkBlue mb-3">{title}</h3>
         <p className="text-gray-600 mb-4 flex-grow">{description}</p>
         {linkText && linkHref && (
           <motion.div
@@ -33,7 +33,7 @@ const FeatureCard = ({ title, description, linkText, linkHref, index = 0 }: Feat
           >
             <Link
               href={linkHref}
-              className="text-strata-purple hover:text-strata-darkPurple font-medium inline-flex items-center"
+              className="text-strata-blue hover:text-strata-darkBlue font-medium inline-flex items-center"
             >
               {linkText}
               <motion.span

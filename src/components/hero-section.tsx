@@ -17,7 +17,7 @@ const HeroSection = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-strata-darkPurple leading-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-strata-darkBlue leading-tight">
                 World's-Leading<br/>
                 Cybersecurity
               </h1>
@@ -39,10 +39,10 @@ const HeroSection = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="flex flex-wrap gap-4"
             >
-              <Button className="bg-strata-purple hover:bg-strata-darkPurple text-white px-8 py-6 rounded-lg text-lg">
+              <Button className="bg-strata-blue hover:bg-strata-darkBlue text-white px-8 py-6 rounded-lg text-lg">
                 Get Started
               </Button>
-              <Button variant="outline" className="border-strata-purple text-strata-purple hover:bg-strata-purple/10 px-8 py-6 rounded-lg text-lg">
+              <Button variant="outline" className="border-strata-blue text-strata-blue hover:bg-strata-blue/10 px-8 py-6 rounded-lg text-lg">
                 Learn More
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
@@ -67,8 +67,8 @@ const HeroSection = () => {
       </div>
 
       {/* Background elements */}
-      <div className="absolute top-1/4 right-0 w-64 h-64 bg-strata-purple/5 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-1/4 left-0 w-72 h-72 bg-strata-lightPurple/5 rounded-full blur-3xl"></div>
+      <div className="absolute top-1/4 right-0 w-64 h-64 bg-strata-blue/5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-1/4 left-0 w-72 h-72 bg-strata-lightBlue/5 rounded-full blur-3xl"></div>
     </section>
   );
 };

@@ -10,15 +10,15 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-strata-purple text-white shadow hover:bg-strata-darkPurple",
+          "bg-strata-blue text-white shadow hover:bg-strata-darkBlue",
         destructive:
           "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
         outline:
-          "border border-strata-purple text-strata-purple bg-transparent shadow-sm hover:bg-strata-purple/10",
+          "border border-strata-blue text-strata-blue bg-transparent shadow-sm hover:bg-strata-blue/10",
         secondary:
           "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
-        ghost: "hover:bg-strata-purple/10 hover:text-strata-purple",
-        link: "text-strata-purple underline-offset-4 hover:underline",
+        ghost: "hover:bg-strata-blue/10 hover:text-strata-blue",
+        link: "text-strata-blue underline-offset-4 hover:underline",
       },
       size: {
         default: "h-9 px-4 py-2",

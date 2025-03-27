@@ -16,7 +16,7 @@ const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-strata-darkPurple text-white">
+    <footer className="bg-strata-darkBlue text-white">
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Company Info */}
@@ -65,11 +65,6 @@ const Footer = () => {
               <li>
                 <Link href="/feather" className="text-white/70 hover:text-white transition-colors">
                   Feather
-                </Link>
-              </li>
-              <li>
-                <Link href="/roadmap" className="text-white/70 hover:text-white transition-colors">
-                  Roadmap
                 </Link>
               </li>
               <li>
@@ -127,13 +122,13 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-6">Contact Us</h3>
             <ul className="space-y-4">
               <li className="flex items-center gap-3">
-                <Mail className="text-strata-purple" size={18} />
+                <Mail className="text-strata-blue" size={18} />
                 <a href="mailto:support@wingmanproduct.com" className="text-white/70 hover:text-white transition-colors">
                   support@wingmanproduct.com
                 </a>
               </li>
               <li className="flex items-center gap-3">
-                <Mail className="text-strata-purple" size={18} />
+                <Mail className="text-strata-blue" size={18} />
                 <a href="mailto:demo@wingmanproduct.com" className="text-white/70 hover:text-white transition-colors">
                   demo@wingmanproduct.com
                 </a>

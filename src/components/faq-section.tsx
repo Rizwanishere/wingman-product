@@ -46,7 +46,7 @@ const FaqSection = () => {
     {
       id: 8,
       question: "What is an Entity Graph Model?",
-      answer: "An entity graph model is a visual representation of the relationships between entities or objects in a system. It's a graphical technique used to depict how different entities are connected and how data flows between them. Key components of an entity graph model: Nodes: Represent entities or objects. Edges: Represent the relationships between entities. These can be one-to-one, one-to-many, or many-to-many. Attributes: Describe the properties of each entity. Common types of entity graph models: Entity-Relationship (ER) Diagrams: A widely used model that focuses on entities and their relationships. Class Diagrams: Used in object-oriented analysis and design, focusing on classes and their attributes, operations,and relationships. UML (Unified Modeling Language) Diagrams: A comprehensive set of modeling techniques that includes entity graph models like class diagrams, component diagrams, and deployment diagrams. Benefits of using entity graph models: Visual Understanding: Provides a clear and intuitive representation of complex data structures. Communication Tool: Helps in communicating system design and data relationships to stakeholders. Analysis and Design: Aids in identifying entities, attributes, and relationships during the analysis and design phases. Data Modeling: Serves as a foundation for database design and development."
+      answer: "An entity graph model is a visual representation of the relationships between entities or objects in a system. It's a graphical technique used to depict how different entities are connected and how data flows between them. Key components of an entity graph model: Nodes: Represent entities or objects. Edges: Represent the relationships between entities. These can be one-to-one, one-to-many, or many-to-many. Attributes: Describe the properties of each entity. Common types of entity graph models: Entity-Relationship (ER) Diagrams: A widely used model that focuses on entities and their relationships. Class Diagrams: Used in object-oriented analysis and design, focusing on classes and their attributes,operations,and relationships. UML (Unified Modeling Language) Diagrams: A comprehensive set of modeling techniques that includes entity graph models like class diagrams, component diagrams, and deployment diagrams. Benefits of using entity graph models: Visual Understanding: Provides a clear and intuitive representation of complex data structures. Communication Tool: Helps in communicating system design and data relationships to stakeholders. Analysis and Design: Aids in identifying entities, attributes, and relationships during the analysis and design phases. Data Modeling: Serves as a foundation for database design and development."
     }
   ];
 
@@ -64,7 +64,7 @@ const FaqSection = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-strata-darkPurple mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-strata-darkBlue mb-4">
             Don't hesitate to ask, we are here for you
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -84,7 +84,7 @@ const FaqSection = () => {
             >
               <div
                 className={`border rounded-lg overflow-hidden transition-colors ${
-                  activeIndex === index ? "border-strata-purple" : "border-gray-200"
+                  activeIndex === index ? "border-strata-blue" : "border-gray-200"
                 }`}
               >
                 <button
@@ -92,11 +92,11 @@ const FaqSection = () => {
                   className="w-full flex justify-between items-center p-5 text-left bg-white hover:bg-gray-50 transition-colors"
                   aria-expanded={activeIndex === index}
                 >
-                  <h3 className="text-lg font-semibold text-strata-darkPurple">
+                  <h3 className="text-lg font-semibold text-strata-darkBlue">
                     {faq.question}
                   </h3>
                   <span className={`flex items-center justify-center w-6 h-6 rounded-full transition-colors ${
-                    activeIndex === index ? "bg-strata-purple text-white" : "bg-gray-100 text-gray-600"
+                    activeIndex === index ? "bg-strata-blue text-white" : "bg-gray-100 text-gray-600"
                   }`}>
                     {activeIndex === index ? <Minus size={16} /> : <Plus size={16} />}
                   </span>
