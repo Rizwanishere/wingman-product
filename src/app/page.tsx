@@ -8,7 +8,6 @@ import LatestNewsSection from "@/components/latest-news-section";
 import FeatureCardSection from "@/components/feature-card-section";
 import ContactSection from "@/components/contact-section";
 import LargeWideBanner from "@/components/large-wide-banner";
-import ServicesSection from "@/components/services-section";
 
 export default function Home() {
   return (
@@ -29,15 +28,12 @@ export default function Home() {
       {/* Case Studies Section */}
       <CaseStudiesSection />
 
-      {/* Right text with left scrollable cards */}
+      {/* Services Section with FEATHER */}
       <ScrollableCardsSection
         imageOnRight={false}
-        title="Key Benefits"
-        subtitle="See how our clients benefit from our services"
+        title="What is FEATHER?"
+        subtitle="Feather is a ecosystem of services designed to deliver use cases in digital space that require data processing and content rendering at high speeds."
       />
-
-      {/* Services Section */}
-      <ServicesSection />
 
       {/* Latest News Section */}
       <LatestNewsSection />

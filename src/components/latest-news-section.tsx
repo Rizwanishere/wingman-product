@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 const LatestNewsSection = () => {
   const newsItems = [
@@ -11,14 +12,16 @@ const LatestNewsSection = () => {
       title: "Synthetic Fraud Detection",
       date: "March 15, 2024",
       excerpt: "Synthetic identity fraud is a type of identity theft in which a criminal combines both real and fake personal information to create a new, fictious identity that can then be used for various identity-related schemes, such as credit card fraud, bank fraud, and more.",
-      category: "Security Insights"
+      category: "Security Insights",
+      imageUrl: "https://www.socure.com/_next/image?url=https%3A%2F%2Fmedia.socure.com%2Fapp%2Fuploads%2F2024%2F12%2FProducts_SigmaSyntheticFraud.webp&w=3840&q=75"
     },
     {
       id: 2,
       title: "Understanding Social Engineering",
       date: "February 28, 2024",
       excerpt: "Social engineering is a dangerous weapon many cybercriminals use to achieve their nefarious goals. It leverages psychological manipulation to deceive individuals into divulging confidential or personal information.",
-      category: "Cyber Threats"
+      category: "Cyber Threats",
+      imageUrl: "https://www.nclose.com/wp-content/uploads/istockphoto-621493344-170667a.jpg"
     }
   ];
 
@@ -50,8 +53,13 @@ const LatestNewsSection = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-white rounded-xl shadow-md overflow-hidden h-full flex flex-col"
             >
-              <div className="h-48 bg-gray-200 animate-pulse flex items-center justify-center">
-                <p className="text-gray-500">Image placeholder</p>
+              <div className="relative h-48">
+                <Image
+                  src={item.imageUrl}
+                  alt={item.title}
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex justify-between items-center mb-3">

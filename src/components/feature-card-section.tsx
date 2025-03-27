@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 const FeatureCardSection = () => {
   return (
@@ -32,8 +33,13 @@ const FeatureCardSection = () => {
           className="bg-white rounded-xl overflow-hidden shadow-lg mb-12"
         >
           <div className="grid grid-cols-1 md:grid-cols-2">
-            <div className="bg-gray-200 h-full min-h-[300px] animate-pulse flex items-center justify-center order-2 md:order-1">
-              <p className="text-gray-500">Image placeholder</p>
+            <div className="relative h-full min-h-[300px] order-2 md:order-1">
+              <Image
+                src="https://platform3solutions.com/wp-content/uploads/2024/02/IT-Modernization-the-new-IT-stack-has-arrived.webp"
+                alt="Integration and stack modernization"
+                fill
+                className="object-cover"
+              />
             </div>
             <div className="p-8 md:p-12 flex flex-col justify-center order-1 md:order-2">
               <h3 className="text-2xl md:text-3xl font-bold text-strata-darkBlue mb-4">
@@ -111,8 +117,13 @@ const FeatureCardSection = () => {
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </div>
-            <div className="bg-gray-200 h-full min-h-[300px] animate-pulse flex items-center justify-center">
-              <p className="text-gray-500">Image placeholder</p>
+            <div className="relative h-full min-h-[300px]">
+              <Image
+                src="https://eccweb.s3.ap-south-1.amazonaws.com/wp-content/uploads/2023/01/26103854/Blog-Secrets-to-Building-a-Career-in-Cybersecurity-in-2023-1.png"
+                alt="Wingman Product Services"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </motion.div>
