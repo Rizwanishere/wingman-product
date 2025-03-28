@@ -16,24 +16,30 @@ export default function Home() {
       <HeroSection />
 
       {/* Large Wide Banner */}
-      <LargeWideBanner />
+      <section id="about-us">
+        <LargeWideBanner />
+      </section>
 
       {/* Left text with right scrollable cards */}
+      <section id="why-wingman">
       <ScrollableCardsSection
         imageOnRight={true}
         title="Why Wingman?"
         subtitle="Discover how Wingman can transform your business"
       />
+      </section>
 
       {/* Case Studies Section */}
       <CaseStudiesSection />
 
       {/* Services Section with FEATHER */}
-      <ScrollableCardsSection
-        imageOnRight={false}
-        title="What is FEATHER?"
-        subtitle="Feather is a ecosystem of services designed to deliver use cases in digital space that require data processing and content rendering at high speeds."
-      />
+      <section id="feather">
+        <ScrollableCardsSection
+          imageOnRight={false}
+          title="What is FEATHER?"
+          subtitle="Feather is a ecosystem of services designed to deliver use cases in digital space that require data processing and content rendering at high speeds."
+        />
+      </section>
 
       {/* Latest News Section */}
       <LatestNewsSection />
@@ -42,16 +48,24 @@ export default function Home() {
       <FaqSection />
 
       {/* Feature Card Section - Two wide cards with alternating layout */}
-      <FeatureCardSection />
+      <section id="services">
+        <FeatureCardSection />
+      </section>
 
       {/* Partners Section */}
+      <section id="partners">
       <PartnersSection />
+      </section>
 
       {/* CTA Section - Experience the platform */}
-      <CtaSection />
+      <section id="book-demo">
+        <CtaSection />
+      </section>
 
       {/* Contact Section */}
-      <ContactSection />
+      <section id="contact">
+        <ContactSection />
+      </section>
     </>
   );
 }

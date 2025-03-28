@@ -7,6 +7,20 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const headerOffset = 80; // Adjust this value based on your header height
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+  };
+
   return (
     <section className="relative w-full min-h-[80vh] flex flex-col justify-center bg-gradient-to-r from-strata-lightGray to-white overflow-hidden">
       <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
@@ -39,10 +53,17 @@ const HeroSection = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="flex flex-wrap gap-4"
             >
-              <Button className="bg-strata-blue hover:bg-strata-darkBlue text-white px-8 py-6 rounded-lg text-lg">
+              <Button 
+                className="bg-strata-blue hover:bg-strata-darkBlue text-white px-8 py-6 rounded-lg text-lg"
+                onClick={() => scrollToSection('why-wingman')}
+              >
                 Get Started
               </Button>
-              <Button variant="outline" className="border-strata-blue text-strata-blue hover:bg-strata-blue/10 px-8 py-6 rounded-lg text-lg">
+              <Button 
+                variant="outline" 
+                className="border-strata-blue text-strata-blue hover:bg-strata-blue/10 px-8 py-6 rounded-lg text-lg"
+                onClick={() => scrollToSection('services')}
+              >
                 Learn More
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>

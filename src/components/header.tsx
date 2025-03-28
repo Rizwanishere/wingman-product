@@ -48,6 +48,21 @@ const Header = () => {
     };
   }, []);
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const headerOffset = 80; // Adjust this value based on your header height
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+    setIsMenuOpen(false);
+  };
+
   return (
     <header
       className={`sticky top-0 z-50 w-full transition-all duration-300 ${
@@ -68,63 +83,68 @@ const Header = () => {
           </div>
         </Link>
 
-
         {/* Desktop Navigation */}
         <div className="hidden lg:flex">
           <NavigationMenu>
             <NavigationMenuList>
               {/* About Us */}
               <NavigationMenuItem>
-                <Link href="/about" legacyBehavior passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    About Us
-                  </NavigationMenuLink>
-                </Link>
+                <button
+                  onClick={() => scrollToSection('about-us')}
+                  className={navigationMenuTriggerStyle()}
+                >
+                  About Us
+                </button>
               </NavigationMenuItem>
 
               {/* Why Wingman */}
               <NavigationMenuItem>
-                <Link href="/why-wingman" legacyBehavior passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    Why Wingman
-                  </NavigationMenuLink>
-                </Link>
+                <button
+                  onClick={() => scrollToSection('why-wingman')}
+                  className={navigationMenuTriggerStyle()}
+                >
+                  Why Wingman
+                </button>
               </NavigationMenuItem>
 
               {/* Feather */}
               <NavigationMenuItem>
-                <Link href="/feather" legacyBehavior passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    Feather
-                  </NavigationMenuLink>
-                </Link>
+                <button
+                  onClick={() => scrollToSection('feather')}
+                  className={navigationMenuTriggerStyle()}
+                >
+                  Feather
+                </button>
               </NavigationMenuItem>
 
               {/* Services */}
               <NavigationMenuItem>
-                <Link href="/services" legacyBehavior passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    Services
-                  </NavigationMenuLink>
-                </Link>
+                <button
+                  onClick={() => scrollToSection('services')}
+                  className={navigationMenuTriggerStyle()}
+                >
+                  Services
+                </button>
               </NavigationMenuItem>
 
               {/* Partners */}
               <NavigationMenuItem>
-                <Link href="/partners" legacyBehavior passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    Partners
-                  </NavigationMenuLink>
-                </Link>
+              <button
+                  onClick={() => scrollToSection('partners')}
+                  className={navigationMenuTriggerStyle()}
+                >
+                  Partners
+                </button>
               </NavigationMenuItem>
 
               {/* Contact Us */}
               <NavigationMenuItem>
-                <Link href="/contact" legacyBehavior passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    Contact Us
-                  </NavigationMenuLink>
-                </Link>
+                <button
+                  onClick={() => scrollToSection('contact')}
+                  className={navigationMenuTriggerStyle()}
+                >
+                  Contact Us
+                </button>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
@@ -136,7 +156,10 @@ const Header = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <Button className="bg-strata-blue hover:bg-strata-darkBlue text-white">
+            <Button 
+              className="bg-strata-blue hover:bg-strata-darkBlue text-white"
+              onClick={() => scrollToSection('book-demo')}
+            >
               Book a Demo
             </Button>
           </motion.div>
@@ -177,27 +200,45 @@ const Header = () => {
             <div className="container mx-auto px-4 py-6 h-full overflow-y-auto">
               <div className="flex flex-col space-y-4">
                 {/* Mobile menu items */}
-                <Link href="/about" className="py-3 font-medium text-strata-darkBlue block border-b pb-2">
+                <button
+                  onClick={() => scrollToSection('about-us')}
+                  className="py-3 font-medium text-strata-darkBlue block border-b pb-2 text-left"
+                >
                   About Us
-                </Link>
-                <Link href="/why-wingman" className="py-3 font-medium text-strata-darkBlue block border-b pb-2">
+                </button>
+                <button
+                  onClick={() => scrollToSection('about-us')}
+                  className="py-3 font-medium text-strata-darkBlue block border-b pb-2 text-left"
+                >
                   Why Wingman
-                </Link>
-                <Link href="/feather" className="py-3 font-medium text-strata-darkBlue block border-b pb-2">
+                </button>
+                <button
+                  onClick={() => scrollToSection('feather')}
+                  className="py-3 font-medium text-strata-darkBlue block border-b pb-2 text-left"
+                >
                   Feather
-                </Link>
-                <Link href="/services" className="py-3 font-medium text-strata-darkBlue block border-b pb-2">
+                </button>
+                <button
+                  onClick={() => scrollToSection('services')}
+                  className="py-3 font-medium text-strata-darkBlue block border-b pb-2 text-left"
+                >
                   Services
-                </Link>
+                </button>
                 <Link href="/partners" className="py-3 font-medium text-strata-darkBlue block border-b pb-2">
                   Partners
                 </Link>
-                <Link href="/contact" className="py-3 font-medium text-strata-darkBlue block border-b pb-2">
+                <button
+                  onClick={() => scrollToSection('contact')}
+                  className="py-3 font-medium text-strata-darkBlue block border-b pb-2 text-left"
+                >
                   Contact Us
-                </Link>
+                </button>
 
                 <div className="pt-4">
-                  <Button className="bg-strata-blue hover:bg-strata-darkBlue text-white w-full">
+                  <Button 
+                    className="bg-strata-blue hover:bg-strata-darkBlue text-white w-full"
+                    onClick={() => scrollToSection('book-demo')}
+                  >
                     Book a Demo
                   </Button>
                 </div>

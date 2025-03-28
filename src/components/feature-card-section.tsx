@@ -6,6 +6,20 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 const FeatureCardSection = () => {
+  const scrollToContact = () => {
+    const element = document.getElementById('contact');
+    if (element) {
+      const headerOffset = 80; // Adjust this value based on your header height
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+  };
+
   return (
     <section className="py-16 md:py-24 bg-gray-50">
       <div className="container mx-auto px-4">
@@ -68,8 +82,11 @@ const FeatureCardSection = () => {
                   <p className="text-gray-700">Improved operational efficiency</p>
                 </li>
               </ul>
-              <Button className="bg-strata-blue hover:bg-strata-darkBlue text-white self-start">
-                Learn More
+              <Button 
+                className="bg-strata-blue hover:bg-strata-darkBlue text-white self-start"
+                onClick={scrollToContact}
+              >
+                Contact Us
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </div>
@@ -112,7 +129,10 @@ const FeatureCardSection = () => {
                   <p className="text-gray-700">Enhanced operational efficiency</p>
                 </li>
               </ul>
-              <Button className="bg-strata-blue hover:bg-strata-darkBlue text-white self-start">
+              <Button 
+                className="bg-strata-blue hover:bg-strata-darkBlue text-white self-start"
+                onClick={scrollToContact}
+              >
                 Contact Us
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>

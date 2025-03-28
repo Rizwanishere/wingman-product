@@ -1,13 +1,41 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const PartnersSection = () => {
-  // Create an array of 6 partners
-  const partners = Array.from({ length: 6 }, (_, i) => ({
-    id: i + 1,
-    name: `Partner ${i + 1}`
-  }));
+  const partners = [
+    {
+      id: 1,
+      name: "Tendrils.io",
+      logo: "https://media.licdn.com/dms/image/v2/C4E0BAQGGISe_zVicOA/company-logo_200_200/company-logo_200_200/0/1630606845887/tendrilsio_logo?e=2147483647&v=beta&t=Ai9qfV0dOCVCxelMD229xT2TEB8lWJJ3oEMU_3kIG4g"
+    },
+    {
+      id: 2,
+      name: "Google",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png"
+    },
+    {
+      id: 3,
+      name: "Amazon",
+      logo: "https://assets.upstox.com/content/assets/images/cms/202451/Amazon%20logo.png"
+    },
+    
+  ];
+
+  const scrollToContact = () => {
+    const element = document.getElementById('contact');
+    if (element) {
+      const headerOffset = 80; // Adjust this value based on your header height
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+  };
 
   return (
     <section className="py-16 md:py-24 bg-white">
@@ -36,10 +64,15 @@ const PartnersSection = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ scale: 1.05 }}
-              className="bg-gray-100 rounded-lg p-6 flex items-center justify-center h-32 hover:shadow-md transition-shadow"
+              className="bg-white rounded-lg p-6 flex items-center justify-center h-32 hover:shadow-md transition-shadow"
             >
-              <div className="bg-gray-300 animate-pulse w-full h-12 rounded flex items-center justify-center">
-                <p className="text-gray-500 text-sm">{partner.name} Logo</p>
+              <div className="relative w-full h-full">
+                <Image
+                  src={partner.logo}
+                  alt={partner.name}
+                  fill
+                  className="object-contain"
+                />
               </div>
             </motion.div>
           ))}
@@ -52,7 +85,7 @@ const PartnersSection = () => {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="text-center mt-10 text-gray-600"
         >
-          <p>Interested in becoming a partner? <a href="/contact" className="text-strata-blue font-medium">Contact us today</a></p>
+          <p>Interested in becoming a partner? <button onClick={scrollToContact} className="text-strata-blue font-medium hover:underline">Contact us today</button></p>
         </motion.div>
       </div>
     </section>

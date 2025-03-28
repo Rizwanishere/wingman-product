@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import {
   Facebook,
   Twitter,
@@ -14,6 +13,20 @@ import {
 
 const Footer = () => {
   const year = new Date().getFullYear();
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const headerOffset = 80; // Adjust this value based on your header height
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+  };
 
   return (
     <footer className="bg-strata-darkBlue text-white">
@@ -30,21 +43,21 @@ const Footer = () => {
               Experience lightning – fast response times and exceptional reliability for a secure and protected online journey.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-white/70 hover:text-white transition-colors">
+              <span className="text-white/70 hover:text-white transition-colors cursor-pointer">
                 <Facebook size={20} />
-              </a>
-              <a href="#" className="text-white/70 hover:text-white transition-colors">
+              </span>
+              <span className="text-white/70 hover:text-white transition-colors cursor-pointer">
                 <Twitter size={20} />
-              </a>
-              <a href="#" className="text-white/70 hover:text-white transition-colors">
+              </span>
+              <span className="text-white/70 hover:text-white transition-colors cursor-pointer">
                 <Instagram size={20} />
-              </a>
-              <a href="#" className="text-white/70 hover:text-white transition-colors">
+              </span>
+              <span className="text-white/70 hover:text-white transition-colors cursor-pointer">
                 <Linkedin size={20} />
-              </a>
-              <a href="#" className="text-white/70 hover:text-white transition-colors">
+              </span>
+              <span className="text-white/70 hover:text-white transition-colors cursor-pointer">
                 <Youtube size={20} />
-              </a>
+              </span>
             </div>
           </div>
 
@@ -53,29 +66,44 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/about" className="text-white/70 hover:text-white transition-colors">
+                <button
+                  onClick={() => scrollToSection('about-us')}
+                  className="text-white/70 hover:text-white transition-colors text-left w-full"
+                >
                   About Us
-                </Link>
+                </button>
               </li>
               <li>
-                <Link href="/why-wingman" className="text-white/70 hover:text-white transition-colors">
+                <button
+                  onClick={() => scrollToSection('why-wingman')}
+                  className="text-white/70 hover:text-white transition-colors text-left w-full"
+                >
                   Why Wingman
-                </Link>
+                </button>
               </li>
               <li>
-                <Link href="/feather" className="text-white/70 hover:text-white transition-colors">
+                <button
+                  onClick={() => scrollToSection('feather')}
+                  className="text-white/70 hover:text-white transition-colors text-left w-full"
+                >
                   Feather
-                </Link>
+                </button>
               </li>
               <li>
-                <Link href="/services" className="text-white/70 hover:text-white transition-colors">
+                <button
+                  onClick={() => scrollToSection('services')}
+                  className="text-white/70 hover:text-white transition-colors text-left w-full"
+                >
                   Services
-                </Link>
+                </button>
               </li>
               <li>
-                <Link href="/partners" className="text-white/70 hover:text-white transition-colors">
+                <button
+                  onClick={() => scrollToSection('partners')}
+                  className="text-white/70 hover:text-white transition-colors text-left w-full"
+                >
                   Partners
-                </Link>
+                </button>
               </li>
             </ul>
           </div>
@@ -85,34 +113,34 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-6">Resources</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/blog" className="text-white/70 hover:text-white transition-colors">
+                <span className="text-white/70 hover:text-white transition-colors cursor-pointer">
                   Blog
-                </Link>
+                </span>
               </li>
               <li>
-                <Link href="/case-studies" className="text-white/70 hover:text-white transition-colors">
+                <span className="text-white/70 hover:text-white transition-colors cursor-pointer">
                   Case Studies
-                </Link>
+                </span>
               </li>
               <li>
-                <Link href="/faqs" className="text-white/70 hover:text-white transition-colors">
+                <span className="text-white/70 hover:text-white transition-colors cursor-pointer">
                   FAQs
-                </Link>
+                </span>
               </li>
               <li>
-                <Link href="/support" className="text-white/70 hover:text-white transition-colors">
+                <span className="text-white/70 hover:text-white transition-colors cursor-pointer">
                   Support
-                </Link>
+                </span>
               </li>
               <li>
-                <Link href="/privacy-policy" className="text-white/70 hover:text-white transition-colors">
+                <span className="text-white/70 hover:text-white transition-colors cursor-pointer">
                   Privacy Policy
-                </Link>
+                </span>
               </li>
               <li>
-                <Link href="/terms-of-service" className="text-white/70 hover:text-white transition-colors">
+                <span className="text-white/70 hover:text-white transition-colors cursor-pointer">
                   Terms of Service
-                </Link>
+                </span>
               </li>
             </ul>
           </div>
@@ -123,15 +151,15 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-center gap-3">
                 <Mail className="text-strata-blue" size={18} />
-                <a href="mailto:support@wingmanproduct.com" className="text-white/70 hover:text-white transition-colors">
+                <span className="text-white/70 hover:text-white transition-colors cursor-pointer">
                   support@wingmanproduct.com
-                </a>
+                </span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="text-strata-blue" size={18} />
-                <a href="mailto:demo@wingmanproduct.com" className="text-white/70 hover:text-white transition-colors">
+                <span className="text-white/70 hover:text-white transition-colors cursor-pointer">
                   demo@wingmanproduct.com
-                </a>
+                </span>
               </li>
             </ul>
           </div>
@@ -144,15 +172,15 @@ const Footer = () => {
             &copy; {year} Wingman. All rights reserved.
           </p>
           <div className="flex space-x-6">
-            <Link href="/privacy-policy" className="text-white/70 text-sm hover:text-white transition-colors">
+            <span className="text-white/70 text-sm hover:text-white transition-colors cursor-pointer">
               Privacy Policy
-            </Link>
-            <Link href="/terms-of-service" className="text-white/70 text-sm hover:text-white transition-colors">
+            </span>
+            <span className="text-white/70 text-sm hover:text-white transition-colors cursor-pointer">
               Terms of Service
-            </Link>
-            <Link href="/cookies" className="text-white/70 text-sm hover:text-white transition-colors">
+            </span>
+            <span className="text-white/70 text-sm hover:text-white transition-colors cursor-pointer">
               Cookies
-            </Link>
+            </span>
           </div>
         </div>
       </div>
