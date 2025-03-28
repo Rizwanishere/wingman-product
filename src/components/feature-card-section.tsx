@@ -47,7 +47,8 @@ const FeatureCardSection = () => {
           className="bg-white rounded-xl overflow-hidden shadow-lg mb-12"
         >
           <div className="grid grid-cols-1 md:grid-cols-2">
-            <div className="relative h-full min-h-[300px] order-2 md:order-1">
+            {/* Image - Will show first on mobile */}
+            <div className="relative h-full min-h-[300px] order-first md:order-1">
               <Image
                 src="https://platform3solutions.com/wp-content/uploads/2024/02/IT-Modernization-the-new-IT-stack-has-arrived.webp"
                 alt="Integration and stack modernization"
@@ -55,7 +56,8 @@ const FeatureCardSection = () => {
                 className="object-cover"
               />
             </div>
-            <div className="p-8 md:p-12 flex flex-col justify-center order-1 md:order-2">
+            {/* Content */}
+            <div className="p-8 md:p-12 flex flex-col justify-center order-last md:order-2">
               <h3 className="text-2xl md:text-3xl font-bold text-strata-darkBlue mb-4">
                 Integration and stack modernization
               </h3>
@@ -102,7 +104,8 @@ const FeatureCardSection = () => {
           className="bg-white rounded-xl overflow-hidden shadow-lg"
         >
           <div className="grid grid-cols-1 md:grid-cols-2">
-            <div className="p-8 md:p-12 flex flex-col justify-center">
+            {/* Content */}
+            <div className="p-8 md:p-12 flex flex-col justify-center order-last md:order-1">
               <h3 className="text-2xl md:text-3xl font-bold text-strata-darkBlue mb-4">
                 Wingman Product Services
               </h3>
@@ -137,7 +140,8 @@ const FeatureCardSection = () => {
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </div>
-            <div className="relative h-full min-h-[300px]">
+            {/* Image - Will show first on mobile */}
+            <div className="relative h-full min-h-[300px] order-first md:order-2">
               <Image
                 src="https://eccweb.s3.ap-south-1.amazonaws.com/wp-content/uploads/2023/01/26103854/Blog-Secrets-to-Building-a-Career-in-Cybersecurity-in-2023-1.png"
                 alt="Wingman Product Services"

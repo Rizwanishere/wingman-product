@@ -25,6 +25,23 @@ const HeroSection = () => {
     <section className="relative w-full min-h-[80vh] flex flex-col justify-center bg-gradient-to-r from-strata-lightGray to-white overflow-hidden">
       <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Image - Will show first on mobile */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="relative h-[300px] sm:h-[400px] lg:h-[500px] rounded-xl shadow-2xl overflow-hidden order-first lg:order-last"
+          >
+            <Image 
+              src="https://www.reuters.com/resizer/v2/SL2P2E7RJNGXVEG7EF42ID72JQ.png?auth=54e3ba27aee5af0abef4d5f67fa397276201993aed0d1a8ee311b0c87628b6cf&width=1098&quality=80"
+              alt="Cybersecurity Hero Image"
+              layout="fill"
+              objectFit="cover"
+              className="rounded-xl"
+            />
+          </motion.div>
+
+          {/* Content */}
           <div className="space-y-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -69,21 +86,6 @@ const HeroSection = () => {
               </Button>
             </motion.div>
           </div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="relative h-[400px] lg:h-[500px] rounded-xl shadow-2xl overflow-hidden"
-          >
-            <Image 
-              src="https://www.reuters.com/resizer/v2/SL2P2E7RJNGXVEG7EF42ID72JQ.png?auth=54e3ba27aee5af0abef4d5f67fa397276201993aed0d1a8ee311b0c87628b6cf&width=1098&quality=80"
-              alt="Cybersecurity Hero Image"
-              layout="fill"
-              objectFit="cover"
-              className="rounded-xl"
-            />
-          </motion.div>
         </div>
       </div>
 
