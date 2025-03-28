@@ -73,7 +73,7 @@ const ScrollableCardsSection = ({ imageOnRight, title, subtitle }: ScrollableCar
   };
 
   const getCardsBasedOnTitle = () => {
-    if (title === "Our Solutions") {
+    if (title === "Why Wingman?") {
       return cardsData.solutions;
     } else if (title === "What is FEATHER?") {
       return cardsData.services;
@@ -113,7 +113,7 @@ const ScrollableCardsSection = ({ imageOnRight, title, subtitle }: ScrollableCar
         transition={{ duration: 0.5, delay: 0.1 }}
       >
         <p className="text-lg text-gray-600 mb-8">
-          {title === "Our Solutions" 
+          {title === "Why Wingman?" 
             ? "Our security systems utilize Distributed computing, Artificial Intelligence, and Distributed ledger technology to identify and neutralize threats in real-time."
             : "Feather is a ecosystem of services designed to deliver use cases in digital space that require data processing and content rendering at high speeds. It delivers you a niche tech stack putting Distributed computing and AI at your fingertips. Wingman utilizes it's framework's strength to stand up entity graphs in real time and it's patented approach of using interrupt driven orchestration that utilizes gaming theory's observability pattern for data routing."
           }
@@ -127,7 +127,7 @@ const ScrollableCardsSection = ({ imageOnRight, title, subtitle }: ScrollableCar
         transition={{ duration: 0.5, delay: 0.2 }}
       >
         <ul className="space-y-4">
-          {title === "Our Solutions" ? (
+          {title === "Why Wingman?" ? (
             <>
               <li className="flex items-start gap-2">
                 <div className="h-6 w-6 rounded-full bg-strata-blue/20 flex items-center justify-center mt-1">
@@ -197,7 +197,7 @@ const ScrollableCardsSection = ({ imageOnRight, title, subtitle }: ScrollableCar
                 <div className="relative h-52">
                   <Image
                     src={
-                      title === "Our Solutions" ? (
+                      title === "Why Wingman?" ? (
                         card.id === 1
                           ? "https://blog.ipleaders.in/wp-content/uploads/2020/08/Lock-HERO-1.jpg"
                           : card.id === 2

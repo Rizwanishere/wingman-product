@@ -21,7 +21,7 @@ export default function Home() {
       {/* Left text with right scrollable cards */}
       <ScrollableCardsSection
         imageOnRight={true}
-        title="Our Solutions"
+        title="Why Wingman?"
         subtitle="Discover how Wingman can transform your business"
       />
 

@@ -7,8 +7,12 @@ import Footer from "@/components/footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Wingman: World's Leading Cybersecurity",
-  description: "Build an identity fabric with Identity Orchestration. Add MFA on any app, ditch IAM tech debt, and ensure your apps stay up even when your IDP isn't.",
+  title: "Wingman - World's-Leading Cybersecurity",
+  description: "Experience lightning-fast response times and exceptional reliability for a secure and protected online journey.",
+  icons: {
+    icon: '/wingmanIcon.png',
+    apple: '/wingmanIcon.png',
+  },
 };
 
 export default function RootLayout({
