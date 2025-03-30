@@ -21,6 +21,24 @@ const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileSubmenu, setMobileSubmenu] = useState<string | null>(null);
 
+  // Add news items data
+  const newsItems = [
+    {
+      id: 1,
+      title: "Synthetic Fraud Detection",
+      date: "March 15, 2024",
+      category: "Security Insights",
+      imageUrl: "https://www.socure.com/_next/image?url=https%3A%2F%2Fmedia.socure.com%2Fapp%2Fuploads%2F2024%2F12%2FProducts_SigmaSyntheticFraud.webp&w=3840&q=75"
+    },
+    {
+      id: 2,
+      title: "Understanding Social Engineering",
+      date: "February 28, 2024",
+      category: "Cyber Threats",
+      imageUrl: "https://www.nclose.com/wp-content/uploads/istockphoto-621493344-170667a.jpg"
+    }
+  ];
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
     if (isMenuOpen) {
@@ -220,6 +238,8 @@ const Header = () => {
                       <X size={24} />
                     </button>
                   </div>
+                  
+                  {/* Navigation Items */}
                   <div className="flex flex-col space-y-4">
                     {/* Mobile menu items */}
                     <button
@@ -258,10 +278,49 @@ const Header = () => {
                     >
                       Contact Us
                     </Link>
+
+                    {/* Latest News Section */}
+                    <div className="py-4">
+                      <h3 className="text-lg font-semibold text-strata-darkBlue mb-4">Latest News</h3>
+                      <div className="overflow-x-auto">
+                        <div className="flex gap-4 pb-4" style={{ scrollSnapType: 'x mandatory' }}>
+                          {newsItems.map((item) => (
+                            <div
+                              key={item.id}
+                              className="flex-none w-[280px] bg-white rounded-xl shadow-md overflow-hidden"
+                              style={{ scrollSnapAlign: 'start' }}
+                            >
+                              <div className="relative h-36">
+                                <Image
+                                  src={item.imageUrl}
+                                  alt={item.title}
+                                  fill
+                                  className="object-cover"
+                                />
+                              </div>
+                              <div className="p-4">
+                                <div className="flex justify-between items-center mb-2">
+                                  <span className="text-xs font-medium px-2 py-1 bg-strata-blue/10 text-strata-blue rounded-full">
+                                    {item.category}
+                                  </span>
+                                  <span className="text-xs text-gray-500">
+                                    {item.date}
+                                  </span>
+                                </div>
+                                <h4 className="text-sm font-semibold text-strata-darkBlue">
+                                  {item.title}
+                                </h4>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+
                     <div className="pt-4">
                       <Button 
                         className="bg-strata-blue hover:bg-strata-darkBlue text-white w-full"
-                        onClick={() => scrollToSection('book-demo')}
+                        onClick={() => window.location.href = '/contact'}
                       >
                         Book a Demo
                       </Button>

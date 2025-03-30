@@ -27,7 +27,10 @@ const CtaSection = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Button className="bg-white text-strata-darkBlue hover:bg-white/90 w-full sm:w-auto text-lg px-8 py-6 h-auto">
+                <Button
+                  className="bg-white text-strata-darkBlue hover:bg-white/90 w-full sm:w-auto text-lg px-8 py-6 h-auto"
+                  onClick={() => window.location.href = '/contact'}
+                >
                   Book a Demo
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
@@ -36,7 +39,11 @@ const CtaSection = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Button variant="outline" className="bg-white text-strata-darkBlue hover:bg-white/90 w-full sm:w-auto text-lg px-8 py-6 h-auto">
+                <Button
+                  variant="outline"
+                  className="bg-white text-strata-darkBlue hover:bg-white/90 w-full sm:w-auto text-lg px-8 py-6 h-auto"
+                  onClick={() => window.location.href = '/contact'}
+                >
                   Learn More
                 </Button>
               </motion.div>

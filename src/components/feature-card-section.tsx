@@ -4,22 +4,9 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 const FeatureCardSection = () => {
-  const scrollToContact = () => {
-    const element = document.getElementById('contact');
-    if (element) {
-      const headerOffset = 80; // Adjust this value based on your header height
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth"
-      });
-    }
-  };
-
   return (
     <section className="py-16 md:py-24 bg-gray-50">
       <div className="container mx-auto px-4">
@@ -86,10 +73,12 @@ const FeatureCardSection = () => {
               </ul>
               <Button 
                 className="bg-strata-blue hover:bg-strata-darkBlue text-white self-start"
-                onClick={scrollToContact}
+                asChild
               >
-                Contact Us
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <Link href="/contact" className="flex items-center">
+                  Contact Us
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
               </Button>
             </div>
           </div>
@@ -134,10 +123,12 @@ const FeatureCardSection = () => {
               </ul>
               <Button 
                 className="bg-strata-blue hover:bg-strata-darkBlue text-white self-start"
-                onClick={scrollToContact}
+                asChild
               >
-                Contact Us
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <Link href="/contact" className="flex items-center">
+                  Contact Us
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
               </Button>
             </div>
             {/* Image - Will show first on mobile */}

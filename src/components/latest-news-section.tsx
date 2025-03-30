@@ -4,8 +4,34 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { useRef, useState, useEffect } from "react";
 
 const LatestNewsSection = () => {
+  // Explicitly type the ref as HTMLDivElement
+  const scrollContainerRef = useRef<HTMLDivElement | null>(null);
+  const [scrollPercentage, setScrollPercentage] = useState(0);
+  
+  // Track scroll position for indicator
+  const handleScroll = () => {
+    if (scrollContainerRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
+      const maxScrollLeft = scrollWidth - clientWidth;
+      const percentage = maxScrollLeft > 0 ? (scrollLeft / maxScrollLeft) * 100 : 0;
+      setScrollPercentage(percentage);
+    }
+  };
+  
+  // Add scroll event listener
+  useEffect(() => {
+    const scrollContainer = scrollContainerRef.current;
+    if (scrollContainer) {
+      scrollContainer.addEventListener('scroll', handleScroll);
+      return () => {
+        scrollContainer.removeEventListener('scroll', handleScroll);
+      };
+    }
+  }, []);
+
   const newsItems = [
     {
       id: 1,
@@ -43,7 +69,69 @@ const LatestNewsSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Mobile: Horizontal Scrollable List */}
+        <div className="md:hidden">
+          <div 
+            ref={scrollContainerRef}
+            className="overflow-x-auto pb-6 -mx-4"
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            onScroll={handleScroll}
+          >
+            <div className="flex px-4 space-x-6" style={{ minWidth: "min-content" }}>
+              {newsItems.map((item, index) => (
+                <motion.div
+                  key={item.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-white rounded-xl shadow-md overflow-hidden flex-shrink-0"
+                  style={{ width: "300px" }}
+                >
+                  <div className="relative h-48">
+                    <Image
+                      src={item.imageUrl}
+                      alt={item.title}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-6 flex flex-col">
+                    <div className="flex justify-between items-center mb-3">
+                      <span className="text-sm font-medium px-3 py-1 bg-strata-blue/10 text-strata-blue rounded-full">
+                        {item.category}
+                      </span>
+                      <span className="text-sm text-gray-500">
+                        {item.date}
+                      </span>
+                    </div>
+                    <h3 className="text-xl font-semibold text-strata-darkBlue mb-3">
+                      {item.title}
+                    </h3>
+                    <p className="text-gray-600 mb-4">
+                      {item.excerpt}
+                    </p>
+                    <Button variant="link" className="text-strata-blue p-0 h-auto font-medium flex items-center">
+                      Read More
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+          
+          {/* Scroll Indicator Bar */}
+          <div className="relative h-1 bg-gray-200 rounded-full mt-2 mb-6">
+            <div 
+              className="absolute h-1 bg-strata-blue rounded-full transition-all duration-150 ease-out"
+              style={{ width: `${scrollPercentage}%` }}
+            ></div>
+          </div>
+        </div>
+
+        {/* Desktop: Grid Layout */}
+        <div className="hidden md:grid md:grid-cols-2 gap-8">
           {newsItems.map((item, index) => (
             <motion.div
               key={item.id}

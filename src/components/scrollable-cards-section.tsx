@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 interface ScrollableCardsSectionProps {
   imageOnRight: boolean;
@@ -174,8 +175,8 @@ const ScrollableCardsSection = ({ imageOnRight, title, subtitle }: ScrollableCar
         transition={{ duration: 0.5, delay: 0.3 }}
         className="pt-4"
       >
-        <Button className="bg-strata-blue hover:bg-strata-darkBlue text-white">
-          Learn More
+        <Button className="bg-strata-blue hover:bg-strata-darkBlue text-white" asChild>
+          <Link href="/contact">Learn More</Link>
         </Button>
       </motion.div>
     </div>
