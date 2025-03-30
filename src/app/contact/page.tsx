@@ -1,10 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
+import { Button } from "../../components/ui/button";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 
-const ContactSection = () => {
+const Contact = () => {
   return (
     <section className="py-16 md:py-24 bg-strata-lightGray">
       <div className="container mx-auto px-4">
@@ -140,4 +140,4 @@ const ContactSection = () => {
   );
 };
 
-export default ContactSection;
+export default Contact;

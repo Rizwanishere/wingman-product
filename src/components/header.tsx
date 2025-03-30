@@ -140,12 +140,12 @@ const Header = () => {
 
                 {/* Contact Us */}
                 <NavigationMenuItem>
-                  <button
-                    onClick={() => scrollToSection('contact')}
+                  <Link
+                    href="/contact"
                     className={navigationMenuTriggerStyle()}
                   >
                     Contact Us
-                  </button>
+                  </Link>
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
@@ -252,13 +252,12 @@ const Header = () => {
                     >
                       Partners
                     </button>
-                    <button
-                      onClick={() => scrollToSection('contact')}
+                    <Link
+                      href="/contact"
                       className="py-3 font-medium text-strata-darkBlue block border-b pb-2 text-left"
                     >
                       Contact Us
-                    </button>
-
+                    </Link>
                     <div className="pt-4">
                       <Button 
                         className="bg-strata-blue hover:bg-strata-darkBlue text-white w-full"

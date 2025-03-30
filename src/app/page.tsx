@@ -6,7 +6,6 @@ import ScrollableCardsSection from "@/components/scrollable-cards-section";
 import FaqSection from "@/components/faq-section";
 import LatestNewsSection from "@/components/latest-news-section";
 import FeatureCardSection from "@/components/feature-card-section";
-import ContactSection from "@/components/contact-section";
 import LargeWideBanner from "@/components/large-wide-banner";
 
 export default function Home() {
@@ -63,9 +62,9 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact">
+      {/* <section id="contact">
         <ContactSection />
-      </section>
+      </section> */}
     </>
   );
 }
