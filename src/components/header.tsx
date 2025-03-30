@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { usePathname, useRouter } from 'next/navigation';
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -20,6 +21,8 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [mobileSubmenu, setMobileSubmenu] = useState<string | null>(null);
+  const pathname = usePathname();
+  const router = useRouter();
 
   // Add news items data
   const newsItems = [
@@ -66,19 +69,39 @@ const Header = () => {
     };
   }, []);
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      const headerOffset = 80; // Adjust this value based on your header height
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth"
-      });
-    }
+  const scrollToSection = async (sectionId: string) => {
     setIsMenuOpen(false);
+    
+    if (pathname === '/contact') {
+      // If on contact page, navigate to home page and then scroll
+      await router.push('/');
+      
+      // Wait for the navigation and DOM update to complete
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const headerOffset = 80;
+          const offsetPosition = element.offsetTop - headerOffset;
+          
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth"
+          });
+        }
+      }, 500); // Increased timeout to ensure page load
+    } else {
+      // If already on home page, just scroll
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const headerOffset = 80;
+        const offsetPosition = element.offsetTop - headerOffset;
+        
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth"
+        });
+      }
+    }
   };
 
   return (
@@ -275,6 +298,7 @@ const Header = () => {
                     <Link
                       href="/contact"
                       className="py-3 font-medium text-strata-darkBlue block border-b pb-2 text-left"
+                      onClick={() => setIsMenuOpen(false)}
                     >
                       Contact Us
                     </Link>
@@ -318,12 +342,14 @@ const Header = () => {
                     </div>
 
                     <div className="pt-4">
-                      <Button 
-                        className="bg-strata-blue hover:bg-strata-darkBlue text-white w-full"
-                        onClick={() => window.location.href = '/contact'}
-                      >
-                        Book a Demo
-                      </Button>
+                      <Link href="/contact">
+                        <Button 
+                          className="bg-strata-blue hover:bg-strata-darkBlue text-white w-full"
+                          onClick={() => setIsMenuOpen(false)}
+                        >
+                          Book a Demo
+                        </Button>
+                      </Link>
                     </div>
                   </div>
                 </div>

@@ -12,15 +12,9 @@ const PartnersSection = () => {
     },
     {
       id: 2,
-      name: "Google",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png"
-    },
-    {
-      id: 3,
-      name: "Amazon",
-      logo: "https://assets.upstox.com/content/assets/images/cms/202451/Amazon%20logo.png"
-    },
-    
+      name: "Conavlytics",
+      logo: "https://conavlytics.com/wp-content/uploads/2023/03/Conavlytics-Blue-4.png"
+    }
   ];
 
   const scrollToContact = () => {
