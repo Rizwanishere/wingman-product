@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const CtaSection = () => {
   return (
@@ -27,25 +28,27 @@ const CtaSection = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Button
-                  className="bg-white text-strata-darkBlue hover:bg-white/90 w-full sm:w-auto text-lg px-8 py-6 h-auto"
-                  onClick={() => window.location.href = '/contact'}
-                >
-                  Book a Demo
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
+                <Link href="/contact">
+                  <Button
+                    className="bg-white text-strata-darkBlue hover:bg-white/90 w-full sm:w-auto text-lg px-8 py-6 h-auto"
+                  >
+                    Book a Demo
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </Link>
               </motion.div>
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Button
-                  variant="outline"
-                  className="bg-white text-strata-darkBlue hover:bg-white/90 w-full sm:w-auto text-lg px-8 py-6 h-auto"
-                  onClick={() => window.location.href = '/contact'}
-                >
-                  Learn More
-                </Button>
+                <Link href="/contact">
+                  <Button
+                    variant="outline"
+                    className="bg-white text-strata-darkBlue hover:bg-white/90 w-full sm:w-auto text-lg px-8 py-6 h-auto"
+                  >
+                    Learn More
+                  </Button>
+                </Link>
               </motion.div>
             </div>
           </div>

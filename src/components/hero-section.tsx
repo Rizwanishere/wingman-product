@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
@@ -56,20 +57,22 @@ const HeroSection = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="flex flex-wrap gap-4"
             >
-              <Button 
-                className="bg-strata-blue hover:bg-strata-darkBlue text-white px-8 py-6 rounded-lg text-lg"
-                onClick={() => window.location.href = '/contact'}
-              >
-                Contact Us
-              </Button>
-              <Button 
-                variant="outline" 
-                className="border-strata-blue text-strata-blue hover:bg-strata-blue/10 px-8 py-6 rounded-lg text-lg"
-                onClick={() => window.location.href = '/contact'}
-              >
-                Book a Demo
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
+              <Link href="/contact">
+                <Button 
+                  className="bg-strata-blue hover:bg-strata-darkBlue text-white px-8 py-6 rounded-lg text-lg"
+                >
+                  Contact Us
+                </Button>
+              </Link>
+              <Link href="/contact">
+                <Button 
+                  variant="outline" 
+                  className="border-strata-blue text-strata-blue hover:bg-strata-blue/10 px-8 py-6 rounded-lg text-lg"
+                >
+                  Book a Demo
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
             </motion.div>
           </div>
         </div>
