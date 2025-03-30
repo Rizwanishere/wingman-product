@@ -98,8 +98,8 @@ const FeatureCardSection = () => {
               <h3 className="text-2xl md:text-3xl font-bold text-strata-darkBlue mb-4">
                 Wingman Product Services
               </h3>
-              <p className="text-gray-600 mb-6">
-                Integration and support services are crucial for ensuring that Wingman or Feather seamlessly integrate with existing systems and infrastructure within your organization. These services involve configuring, customizing, and helping test your venture to ensure compatibility and optimal performance. Additionally, we can provide ongoing support, troubleshooting, and maintenance to address any issues that may arise during product usage.
+              <p className="text-gray-600 mb-8">
+                Integration and support services are crucial for ensuring that Wingman seamlessly integrates with existing systems and infrastructure within your organization. These services involve configuring, customizing, and helping test your venture to ensure compatibility and optimal performance. Additionally, we can provide ongoing support, troubleshooting, and maintenance to address any issues that may arise during product usage.
               </p>
               <ul className="space-y-3 mb-6">
                 <li className="flex items-start gap-2">

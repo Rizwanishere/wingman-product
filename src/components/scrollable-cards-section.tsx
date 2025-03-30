@@ -43,43 +43,11 @@ const ScrollableCardsSection = ({ imageOnRight, title, subtitle }: ScrollableCar
         title: "Enhanced Access Control",
         description: "Intent based access control enabling smart decision to step when required during the session. Capabilities to revoke OAuth tokens and real time blocking across channels."
       }
-    ],
-    services: [
-      {
-        id: 1,
-        title: "Dynamic Orchestration",
-        description: "Custom orchestrator based on Dog"
-      },
-      {
-        id: 2,
-        title: "Notification Capabilities",
-        description: "Realtime Notification using SMS and Push"
-      },
-      {
-        id: 3,
-        title: "Stream Analytics",
-        description: "Data Streaming and Analytics in realtime"
-      },
-      {
-        id: 4,
-        title: "DLT Data Sharing",
-        description: "Data Sharing using a distributed ledger"
-      },
-      {
-        id: 5,
-        title: "AI Enabled",
-        description: "Easy Integration with trained models through kafka"
-      }
     ]
   };
 
   const getCardsBasedOnTitle = () => {
-    if (title === "Why Wingman?") {
-      return cardsData.solutions;
-    } else if (title === "What is FEATHER?") {
-      return cardsData.services;
-    }
-    return cardsData.solutions; // Default fallback
+    return cardsData.solutions;
   };
 
   const cards = getCardsBasedOnTitle();
@@ -114,10 +82,7 @@ const ScrollableCardsSection = ({ imageOnRight, title, subtitle }: ScrollableCar
         transition={{ duration: 0.5, delay: 0.1 }}
       >
         <p className="text-lg text-gray-600 mb-8">
-          {title === "Why Wingman?" 
-            ? "Our security systems utilize Distributed computing, Artificial Intelligence, and Distributed ledger technology to identify and neutralize threats in real-time."
-            : "Feather is a ecosystem of services designed to deliver use cases in digital space that require data processing and content rendering at high speeds. It delivers you a niche tech stack putting Distributed computing and AI at your fingertips. Wingman utilizes it's framework's strength to stand up entity graphs in real time and it's patented approach of using interrupt driven orchestration that utilizes gaming theory's observability pattern for data routing."
-          }
+          Our security systems utilize Distributed computing, Artificial Intelligence, and Distributed ledger technology to identify and neutralize threats in real-time.
         </p>
       </motion.div>
 
@@ -128,43 +93,24 @@ const ScrollableCardsSection = ({ imageOnRight, title, subtitle }: ScrollableCar
         transition={{ duration: 0.5, delay: 0.2 }}
       >
         <ul className="space-y-4">
-          {title === "Why Wingman?" ? (
-            <>
-              <li className="flex items-start gap-2">
-                <div className="h-6 w-6 rounded-full bg-strata-blue/20 flex items-center justify-center mt-1">
-                  <div className="h-3 w-3 rounded-full bg-strata-blue"></div>
-                </div>
-                <p className="text-gray-700">Real-time threat detection and prevention</p>
-              </li>
-              <li className="flex items-start gap-2">
-                <div className="h-6 w-6 rounded-full bg-strata-blue/20 flex items-center justify-center mt-1">
-                  <div className="h-3 w-3 rounded-full bg-strata-blue"></div>
-                </div>
-                <p className="text-gray-700">AI-powered adaptive security measures</p>
-              </li>
-              <li className="flex items-start gap-2">
-                <div className="h-6 w-6 rounded-full bg-strata-blue/20 flex items-center justify-center mt-1">
-                  <div className="h-3 w-3 rounded-full bg-strata-blue"></div>
-                </div>
-                <p className="text-gray-700">Comprehensive fraud prevention and detection</p>
-              </li>
-            </>
-          ) : (
-            <>
-              <li className="flex items-start gap-2">
-                <div className="h-6 w-6 rounded-full bg-strata-blue/20 flex items-center justify-center mt-1">
-                  <div className="h-3 w-3 rounded-full bg-strata-blue"></div>
-                </div>
-                <p className="text-gray-700">Data flow uses Direct Acyclic Graph for networking</p>
-              </li>
-              <li className="flex items-start gap-2">
-                <div className="h-6 w-6 rounded-full bg-strata-blue/20 flex items-center justify-center mt-1">
-                  <div className="h-3 w-3 rounded-full bg-strata-blue"></div>
-                </div>
-                <p className="text-gray-700">Tie services together using gossip protocol</p>
-              </li>
-            </>
-          )}
+          <li className="flex items-start gap-2">
+            <div className="h-6 w-6 rounded-full bg-strata-blue/20 flex items-center justify-center mt-1">
+              <div className="h-3 w-3 rounded-full bg-strata-blue"></div>
+            </div>
+            <p className="text-gray-700">Real-time threat detection and prevention</p>
+          </li>
+          <li className="flex items-start gap-2">
+            <div className="h-6 w-6 rounded-full bg-strata-blue/20 flex items-center justify-center mt-1">
+              <div className="h-3 w-3 rounded-full bg-strata-blue"></div>
+            </div>
+            <p className="text-gray-700">AI-powered adaptive security measures</p>
+          </li>
+          <li className="flex items-start gap-2">
+            <div className="h-6 w-6 rounded-full bg-strata-blue/20 flex items-center justify-center mt-1">
+              <div className="h-3 w-3 rounded-full bg-strata-blue"></div>
+            </div>
+            <p className="text-gray-700">Comprehensive fraud prevention and detection</p>
+          </li>
         </ul>
       </motion.div>
 

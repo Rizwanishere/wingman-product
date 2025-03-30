@@ -16,7 +16,7 @@ const LargeWideBanner = () => {
           <div className="p-8 md:p-12 lg:p-16">
             <div className="max-w-3xl mx-auto">
               <p className="text-lg text-white/80 mb-8">
-                After delivering a fraud aversion platform that prevented $26 Million of fraud in the first year of launch, our team realized the contribution we can make for digital identity space. There being a clear gap between identity management solution and fraud prevention with no product on market offering all-round support for, pre, post auth fraud prevention and multi factor authentication features. We decided to create Wingman (powered by Feather): Wingman is a AI powered distributed computing platform for identity safeguarding and fraud prevention. It is capable of processing with high speed, accuracy, reliability and exhibits tremendous adaptability.
+                After delivering a fraud aversion platform that prevented $26 Million of fraud in the first year of launch, our team realized the contribution we can make for digital identity space. There being a clear gap between identity management solution and fraud prevention with no product on market offering all-round support for, pre, post auth fraud prevention and multi factor authentication features. We decided to create Wingman: an AI powered distributed computing platform for identity safeguarding and fraud prevention. It is capable of processing with high speed, accuracy, reliability and exhibits tremendous adaptability.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
               </div>

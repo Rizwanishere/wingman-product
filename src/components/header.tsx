@@ -149,16 +149,6 @@ const Header = () => {
                   </button>
                 </NavigationMenuItem>
 
-                {/* Feather */}
-                <NavigationMenuItem>
-                  <button
-                    onClick={() => scrollToSection('feather')}
-                    className={navigationMenuTriggerStyle()}
-                  >
-                    Feather
-                  </button>
-                </NavigationMenuItem>
-
                 {/* Services */}
                 <NavigationMenuItem>
                   <button
@@ -276,12 +266,6 @@ const Header = () => {
                       className="py-3 font-medium text-strata-darkBlue block border-b pb-2 text-left"
                     >
                       Why Wingman
-                    </button>
-                    <button
-                      onClick={() => scrollToSection('feather')}
-                      className="py-3 font-medium text-strata-darkBlue block border-b pb-2 text-left"
-                    >
-                      Feather
                     </button>
                     <button
                       onClick={() => scrollToSection('services')}

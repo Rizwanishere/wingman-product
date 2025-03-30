@@ -21,24 +21,15 @@ export default function Home() {
 
       {/* Left text with right scrollable cards */}
       <section id="why-wingman">
-      <ScrollableCardsSection
-        imageOnRight={true}
-        title="Why Wingman?"
-        subtitle="Discover how Wingman can transform your business"
-      />
+        <ScrollableCardsSection
+          imageOnRight={true}
+          title="Why Wingman?"
+          subtitle="Discover how Wingman can transform your business"
+        />
       </section>
 
       {/* Case Studies Section */}
       <CaseStudiesSection />
-
-      {/* Services Section with FEATHER */}
-      <section id="feather">
-        <ScrollableCardsSection
-          imageOnRight={false}
-          title="What is FEATHER?"
-          subtitle="Feather is a ecosystem of services designed to deliver use cases in digital space that require data processing and content rendering at high speeds."
-        />
-      </section>
 
       {/* Latest News Section */}
       <LatestNewsSection />
@@ -53,18 +44,13 @@ export default function Home() {
 
       {/* Partners Section */}
       <section id="partners">
-      <PartnersSection />
+        <PartnersSection />
       </section>
 
       {/* CTA Section - Experience the platform */}
       <section id="book-demo">
         <CtaSection />
       </section>
-
-      {/* Contact Section */}
-      {/* <section id="contact">
-        <ContactSection />
-      </section> */}
     </>
   );
 }
