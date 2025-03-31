@@ -72,30 +72,29 @@ const Header = () => {
   const scrollToSection = async (sectionId: string) => {
     setIsMenuOpen(false);
     
-    if (pathname === '/contact') {
-      // If on contact page, navigate to home page and then scroll
+    // Check if we're not on the home page
+    if (pathname !== '/') {
+      // Navigate to home page first
       await router.push('/');
       
-      // Wait for the navigation and DOM update to complete
+      // Wait for navigation to complete and then scroll
       setTimeout(() => {
         const element = document.getElementById(sectionId);
         if (element) {
           const headerOffset = 80;
           const offsetPosition = element.offsetTop - headerOffset;
-          
           window.scrollTo({
             top: offsetPosition,
             behavior: "smooth"
           });
         }
-      }, 500); // Increased timeout to ensure page load
+      }, 500);
     } else {
       // If already on home page, just scroll
       const element = document.getElementById(sectionId);
       if (element) {
         const headerOffset = 80;
         const offsetPosition = element.offsetTop - headerOffset;
-        
         window.scrollTo({
           top: offsetPosition,
           behavior: "smooth"
