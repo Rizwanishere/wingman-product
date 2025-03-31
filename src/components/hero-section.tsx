@@ -19,11 +19,11 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="relative h-[300px] sm:h-[400px] lg:h-[500px] rounded-xl shadow-2xl overflow-hidden order-first lg:order-last"
           >
-            <Image 
+            <Image
               src="https://www.reuters.com/resizer/v2/SL2P2E7RJNGXVEG7EF42ID72JQ.png?auth=54e3ba27aee5af0abef4d5f67fa397276201993aed0d1a8ee311b0c87628b6cf&width=1098&quality=80"
               alt="Cybersecurity Hero Image"
-              layout="fill"
-              objectFit="cover"
+              fill
+              style={{ objectFit: "cover" }}
               className="rounded-xl"
             />
           </motion.div>
@@ -36,7 +36,7 @@ const HeroSection = () => {
               transition={{ duration: 0.6 }}
             >
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-strata-darkBlue leading-tight">
-                World's-Leading<br/>
+                World's-Leading<br />
                 Cybersecurity
               </h1>
             </motion.div>
@@ -58,15 +58,15 @@ const HeroSection = () => {
               className="flex flex-wrap gap-4"
             >
               <Link href="/contact">
-                <Button 
+                <Button
                   className="bg-strata-blue hover:bg-strata-darkBlue text-white px-8 py-6 rounded-lg text-lg"
                 >
                   Contact Us
                 </Button>
               </Link>
               <Link href="/contact">
-                <Button 
-                  variant="outline" 
+                <Button
+                  variant="outline"
                   className="border-strata-blue text-strata-blue hover:bg-strata-blue/10 px-8 py-6 rounded-lg text-lg"
                 >
                   Book a Demo
