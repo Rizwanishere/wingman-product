@@ -21,17 +21,23 @@ const Contact = () => {
     setSubmitStatus(null);
 
     try {
+      // Create the payload for Web3Forms
+      const formPayload = {
+        ...formData,
+        access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY, // Using the key from .env
+        from_name: formData.name,
+      };
+
+      // Send the data to Web3Forms API
       const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Accept': 'application/json'
         },
-        body: JSON.stringify({
-          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY,
-          ...formData
-        }),
+        body: JSON.stringify(formPayload)
       });
-
+      
       const data = await response.json();
       
       if (data.success) {
