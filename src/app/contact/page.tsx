@@ -85,11 +85,11 @@ const Contact = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="bg-white rounded-xl shadow-md p-8"
           >
-            <h3 className="text-2xl font-semibold text-strata-darkBlue mb-6">Send Us a Message</h3>
+            <h3 className="text-2xl font-semibold text-center text-strata-darkBlue mb-6">Send Us a Message</h3>
             {submitStatus === 'success' ? (
               <div className="flex flex-col items-center justify-center space-y-4 py-8 mt-16">
                 <CheckCircle2 className="w-16 h-16 text-green-500" />
-                <h4 className="text-xl font-semibold text-green-500">Message Sent Successfully!</h4>
+                <h4 className="text-xl text-center font-semibold text-green-500">Message Sent Successfully!</h4>
                 <p className="text-gray-600 text-center">Thank you for contacting us. We'll get back to you soon.</p>
                 <Button 
                   onClick={() => setSubmitStatus(null)}

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -79,7 +80,12 @@ const PartnersSection = () => {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="text-center mt-10 text-gray-600"
         >
-          <p>Interested in becoming a partner? <button onClick={scrollToContact} className="text-strata-blue font-medium hover:underline">Contact us today</button></p>
+          <p>
+            Interested in becoming a partner?{" "}
+            <Link href="/contact" className="text-strata-blue font-medium hover:underline">
+              Contact us today
+            </Link>
+          </p>
         </motion.div>
       </div>
     </section>

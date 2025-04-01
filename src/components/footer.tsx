@@ -101,7 +101,7 @@ const Footer = () => {
           </div>
 
           {/* Resources */}
-          <div>
+          <div className="hidden lg:block">
             <h3 className="text-lg font-semibold mb-6">Resources</h3>
             <ul className="space-y-3">
               <li>
