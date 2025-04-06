@@ -18,20 +18,6 @@ const PartnersSection = () => {
     }
   ];
 
-  const scrollToContact = () => {
-    const element = document.getElementById('contact');
-    if (element) {
-      const headerOffset = 80; // Adjust this value based on your header height
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth"
-      });
-    }
-  };
-
   return (
     <section className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4">
@@ -42,7 +28,7 @@ const PartnersSection = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-strata-darkBlue mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-wingman-darkBlue mb-4">
             Our Trusted Partners
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -82,7 +68,8 @@ const PartnersSection = () => {
         >
           <p>
             Interested in becoming a partner?{" "}
-            <Link href="/contact" className="text-strata-blue font-medium hover:underline">
+            <br />
+            <Link href="/contact" className="text-wingman-blue font-medium hover:underline">
               Contact us today
             </Link>
           </p>

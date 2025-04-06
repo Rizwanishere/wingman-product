@@ -107,7 +107,7 @@ const Header = () => {
     <>
       <header
         className={`sticky top-0 z-[100] w-full transition-all duration-300 ${
-          scrolled ? "bg-white shadow-md border-b border-gray-200" : "bg-white/95 backdrop-blur-sm"
+          scrolled ? "bg-white/30 backdrop-blur-md border-b border-white/30 shadow-md" : "bg-white/95 backdrop-blur-sm"
         }`}
       >
         <div className="container mx-auto px-4 py-3 md:py-4 flex items-center justify-between relative">
@@ -132,7 +132,7 @@ const Header = () => {
                 <NavigationMenuItem>
                   <button
                     onClick={() => scrollToSection('about-us')}
-                    className={navigationMenuTriggerStyle()}
+                    className={`${navigationMenuTriggerStyle()} bg-transparent`}
                   >
                     About Us
                   </button>
@@ -142,7 +142,7 @@ const Header = () => {
                 <NavigationMenuItem>
                   <button
                     onClick={() => scrollToSection('why-wingman')}
-                    className={navigationMenuTriggerStyle()}
+                    className={`${navigationMenuTriggerStyle()} bg-transparent`}
                   >
                     Why Wingman
                   </button>
@@ -152,7 +152,7 @@ const Header = () => {
                 <NavigationMenuItem>
                   <button
                     onClick={() => scrollToSection('services')}
-                    className={navigationMenuTriggerStyle()}
+                    className={`${navigationMenuTriggerStyle()} bg-transparent`}
                   >
                     Services
                   </button>
@@ -162,7 +162,7 @@ const Header = () => {
                 <NavigationMenuItem>
                   <button
                     onClick={() => scrollToSection('partners')}
-                    className={navigationMenuTriggerStyle()}
+                    className={`${navigationMenuTriggerStyle()} bg-transparent`}
                   >
                     Partners
                   </button>
@@ -172,7 +172,7 @@ const Header = () => {
                 <NavigationMenuItem>
                   <Link
                     href="/contact"
-                    className={navigationMenuTriggerStyle()}
+                    className={`${navigationMenuTriggerStyle()} bg-transparent`}
                   >
                     Contact Us
                   </Link>
@@ -188,7 +188,7 @@ const Header = () => {
               whileTap={{ scale: 0.95 }}
             >
               <Button 
-                className="bg-strata-blue hover:bg-strata-darkBlue text-white"
+                className="bg-wingman-blue hover:bg-wingman-darkBlue text-white"
                 onClick={() => scrollToSection('book-demo')}
               >
                 Book a Demo
@@ -200,7 +200,7 @@ const Header = () => {
           <div className="lg:hidden">
             <button
               onClick={toggleMenu}
-              className="text-strata-darkBlue p-2"
+              className="text-wingman-darkBlue p-2"
               aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             >
               <AnimatePresence mode="wait">
@@ -244,7 +244,7 @@ const Header = () => {
                   <div className="flex justify-end mb-6">
                     <button
                       onClick={toggleMenu}
-                      className="text-strata-darkBlue p-2"
+                      className="text-wingman-darkBlue p-2"
                       aria-label="Close menu"
                     >
                       <X size={24} />
@@ -256,31 +256,31 @@ const Header = () => {
                     {/* Mobile menu items */}
                     <button
                       onClick={() => scrollToSection('about-us')}
-                      className="py-3 font-medium text-strata-darkBlue block border-b pb-2 text-left"
+                      className="py-3 font-medium text-wingman-darkBlue block border-b pb-2 text-left"
                     >
                       About Us
                     </button>
                     <button
                       onClick={() => scrollToSection('why-wingman')}
-                      className="py-3 font-medium text-strata-darkBlue block border-b pb-2 text-left"
+                      className="py-3 font-medium text-wingman-darkBlue block border-b pb-2 text-left"
                     >
                       Why Wingman
                     </button>
                     <button
                       onClick={() => scrollToSection('services')}
-                      className="py-3 font-medium text-strata-darkBlue block border-b pb-2 text-left"
+                      className="py-3 font-medium text-wingman-darkBlue block border-b pb-2 text-left"
                     >
                       Services
                     </button>
                     <button
                       onClick={() => scrollToSection('partners')}
-                      className="py-3 font-medium text-strata-darkBlue block border-b pb-2 text-left"
+                      className="py-3 font-medium text-wingman-darkBlue block border-b pb-2 text-left"
                     >
                       Partners
                     </button>
                     <Link
                       href="/contact"
-                      className="py-3 font-medium text-strata-darkBlue block border-b pb-2 text-left"
+                      className="py-3 font-medium text-wingman-darkBlue block border-b pb-2 text-left"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       Contact Us
@@ -288,7 +288,7 @@ const Header = () => {
 
                     {/* Latest News Section */}
                     <div className="py-4">
-                      <h3 className="text-lg font-semibold text-strata-darkBlue mb-4">Latest News</h3>
+                      <h3 className="text-lg font-semibold text-wingman-darkBlue mb-4">Latest News</h3>
                       <div className="overflow-x-auto">
                         <div className="flex gap-4 pb-4" style={{ scrollSnapType: 'x mandatory' }}>
                           {newsItems.map((item) => (
@@ -307,14 +307,14 @@ const Header = () => {
                               </div>
                               <div className="p-4">
                                 <div className="flex justify-between items-center mb-2">
-                                  <span className="text-xs font-medium px-2 py-1 bg-strata-blue/10 text-strata-blue rounded-full">
+                                  <span className="text-xs font-medium px-2 py-1 bg-wingman-blue/10 text-wingman-blue rounded-full">
                                     {item.category}
                                   </span>
                                   <span className="text-xs text-gray-500">
                                     {item.date}
                                   </span>
                                 </div>
-                                <h4 className="text-sm font-semibold text-strata-darkBlue">
+                                <h4 className="text-sm font-semibold text-wingman-darkBlue">
                                   {item.title}
                                 </h4>
                               </div>
@@ -327,7 +327,7 @@ const Header = () => {
                     <div className="pt-4">
                       <Link href="/contact">
                         <Button 
-                          className="bg-strata-blue hover:bg-strata-darkBlue text-white w-full"
+                          className="bg-wingman-blue hover:bg-wingman-darkBlue text-white w-full"
                           onClick={() => setIsMenuOpen(false)}
                         >
                           Book a Demo
@@ -346,3 +346,7 @@ const Header = () => {
 };
 
 export default Header;
+
+
+
+

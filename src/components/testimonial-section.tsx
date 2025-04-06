@@ -21,8 +21,8 @@ const Testimonial = ({
   colorScheme = "blue"
 }: TestimonialProps) => {
   const bgColor = colorScheme === "blue"
-    ? "bg-strata-blue"
-    : "bg-strata-lightBlue";
+    ? "bg-wingman-blue"
+    : "bg-wingman-lightBlue";
 
   return (
     <motion.div
@@ -78,3 +78,6 @@ const TestimonialSection = () => {
 };
 
 export default TestimonialSection;
+
+
+

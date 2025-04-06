@@ -17,7 +17,7 @@ const FeatureCardSection = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-strata-darkBlue mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-wingman-darkBlue mb-4">
             What Services we offer
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -45,7 +45,7 @@ const FeatureCardSection = () => {
             </div>
             {/* Content */}
             <div className="p-8 md:p-12 flex flex-col justify-center order-last md:order-2">
-              <h3 className="text-2xl md:text-3xl font-bold text-strata-darkBlue mb-4">
+              <h3 className="text-2xl md:text-3xl font-bold text-wingman-darkBlue mb-4">
                 Integration and stack modernization
               </h3>
               <p className="text-gray-600 mb-6">
@@ -53,26 +53,26 @@ const FeatureCardSection = () => {
               </p>
               <ul className="space-y-3 mb-6">
                 <li className="flex items-start gap-2">
-                  <div className="h-6 w-6 rounded-full bg-strata-blue/20 flex items-center justify-center mt-1">
-                    <div className="h-3 w-3 rounded-full bg-strata-blue"></div>
+                  <div className="h-6 w-6 rounded-full bg-wingman-blue/20 flex items-center justify-center mt-1">
+                    <div className="h-3 w-3 rounded-full bg-wingman-blue"></div>
                   </div>
                   <p className="text-gray-700">Seamless system integration</p>
                 </li>
                 <li className="flex items-start gap-2">
-                  <div className="h-6 w-6 rounded-full bg-strata-blue/20 flex items-center justify-center mt-1">
-                    <div className="h-3 w-3 rounded-full bg-strata-blue"></div>
+                  <div className="h-6 w-6 rounded-full bg-wingman-blue/20 flex items-center justify-center mt-1">
+                    <div className="h-3 w-3 rounded-full bg-wingman-blue"></div>
                   </div>
                   <p className="text-gray-700">Legacy system modernization</p>
                 </li>
                 <li className="flex items-start gap-2">
-                  <div className="h-6 w-6 rounded-full bg-strata-blue/20 flex items-center justify-center mt-1">
-                    <div className="h-3 w-3 rounded-full bg-strata-blue"></div>
+                  <div className="h-6 w-6 rounded-full bg-wingman-blue/20 flex items-center justify-center mt-1">
+                    <div className="h-3 w-3 rounded-full bg-wingman-blue"></div>
                   </div>
                   <p className="text-gray-700">Improved operational efficiency</p>
                 </li>
               </ul>
               <Button 
-                className="bg-strata-blue hover:bg-strata-darkBlue text-white self-start"
+                className="bg-wingman-blue hover:bg-wingman-darkBlue text-white self-start"
                 asChild
               >
                 <Link href="/contact" className="flex items-center">
@@ -95,7 +95,7 @@ const FeatureCardSection = () => {
           <div className="grid grid-cols-1 md:grid-cols-2">
             {/* Content */}
             <div className="p-8 md:p-12 flex flex-col justify-center order-last md:order-1">
-              <h3 className="text-2xl md:text-3xl font-bold text-strata-darkBlue mb-4">
+              <h3 className="text-2xl md:text-3xl font-bold text-wingman-darkBlue mb-4">
                 Wingman Product Services
               </h3>
               <p className="text-gray-600 mb-8">
@@ -103,26 +103,26 @@ const FeatureCardSection = () => {
               </p>
               <ul className="space-y-3 mb-6">
                 <li className="flex items-start gap-2">
-                  <div className="h-6 w-6 rounded-full bg-strata-blue/20 flex items-center justify-center mt-1">
-                    <div className="h-3 w-3 rounded-full bg-strata-blue"></div>
+                  <div className="h-6 w-6 rounded-full bg-wingman-blue/20 flex items-center justify-center mt-1">
+                    <div className="h-3 w-3 rounded-full bg-wingman-blue"></div>
                   </div>
                   <p className="text-gray-700">Custom configuration and integration</p>
                 </li>
                 <li className="flex items-start gap-2">
-                  <div className="h-6 w-6 rounded-full bg-strata-blue/20 flex items-center justify-center mt-1">
-                    <div className="h-3 w-3 rounded-full bg-strata-blue"></div>
+                  <div className="h-6 w-6 rounded-full bg-wingman-blue/20 flex items-center justify-center mt-1">
+                    <div className="h-3 w-3 rounded-full bg-wingman-blue"></div>
                   </div>
                   <p className="text-gray-700">Ongoing technical support</p>
                 </li>
                 <li className="flex items-start gap-2">
-                  <div className="h-6 w-6 rounded-full bg-strata-blue/20 flex items-center justify-center mt-1">
-                    <div className="h-3 w-3 rounded-full bg-strata-blue"></div>
+                  <div className="h-6 w-6 rounded-full bg-wingman-blue/20 flex items-center justify-center mt-1">
+                    <div className="h-3 w-3 rounded-full bg-wingman-blue"></div>
                   </div>
                   <p className="text-gray-700">Enhanced operational efficiency</p>
                 </li>
               </ul>
               <Button 
-                className="bg-strata-blue hover:bg-strata-darkBlue text-white self-start"
+                className="bg-wingman-blue hover:bg-wingman-darkBlue text-white self-start"
                 asChild
               >
                 <Link href="/contact" className="flex items-center">
@@ -148,3 +148,4 @@ const FeatureCardSection = () => {
 };
 
 export default FeatureCardSection;
+

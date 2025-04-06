@@ -72,7 +72,7 @@ const ScrollableCardsSection = ({ imageOnRight, title, subtitle }: ScrollableCar
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        <h2 className="text-3xl md:text-4xl font-bold text-strata-darkBlue">{title}</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-wingman-darkBlue">{title}</h2>
       </motion.div>
 
       <motion.div
@@ -94,20 +94,20 @@ const ScrollableCardsSection = ({ imageOnRight, title, subtitle }: ScrollableCar
       >
         <ul className="space-y-4">
           <li className="flex items-start gap-2">
-            <div className="h-6 w-6 rounded-full bg-strata-blue/20 flex items-center justify-center mt-1">
-              <div className="h-3 w-3 rounded-full bg-strata-blue"></div>
+            <div className="h-6 w-6 rounded-full bg-wingman-blue/20 flex items-center justify-center mt-1">
+              <div className="h-3 w-3 rounded-full bg-wingman-blue"></div>
             </div>
             <p className="text-gray-700">Real-time threat detection and prevention</p>
           </li>
           <li className="flex items-start gap-2">
-            <div className="h-6 w-6 rounded-full bg-strata-blue/20 flex items-center justify-center mt-1">
-              <div className="h-3 w-3 rounded-full bg-strata-blue"></div>
+            <div className="h-6 w-6 rounded-full bg-wingman-blue/20 flex items-center justify-center mt-1">
+              <div className="h-3 w-3 rounded-full bg-wingman-blue"></div>
             </div>
             <p className="text-gray-700">AI-powered adaptive security measures</p>
           </li>
           <li className="flex items-start gap-2">
-            <div className="h-6 w-6 rounded-full bg-strata-blue/20 flex items-center justify-center mt-1">
-              <div className="h-3 w-3 rounded-full bg-strata-blue"></div>
+            <div className="h-6 w-6 rounded-full bg-wingman-blue/20 flex items-center justify-center mt-1">
+              <div className="h-3 w-3 rounded-full bg-wingman-blue"></div>
             </div>
             <p className="text-gray-700">Comprehensive fraud prevention and detection</p>
           </li>
@@ -121,7 +121,7 @@ const ScrollableCardsSection = ({ imageOnRight, title, subtitle }: ScrollableCar
         transition={{ duration: 0.5, delay: 0.3 }}
         className="pt-4"
       >
-        <Button className="bg-strata-blue hover:bg-strata-darkBlue text-white" asChild>
+        <Button className="bg-wingman-blue hover:bg-wingman-darkBlue text-white" asChild>
           <Link href="/contact">Learn More</Link>
         </Button>
       </motion.div>
@@ -172,7 +172,7 @@ const ScrollableCardsSection = ({ imageOnRight, title, subtitle }: ScrollableCar
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-strata-darkBlue mb-2">{card.title}</h3>
+                  <h3 className="text-xl font-semibold text-wingman-darkBlue mb-2">{card.title}</h3>
                   <p className="text-gray-600">{card.description}</p>
                 </div>
               </div>
@@ -197,7 +197,7 @@ const ScrollableCardsSection = ({ imageOnRight, title, subtitle }: ScrollableCar
             <button
               key={index}
               className={`h-2.5 w-2.5 rounded-full transition-colors ${
-                activeIndex === index ? "bg-strata-blue" : "bg-gray-300"
+                activeIndex === index ? "bg-wingman-blue" : "bg-gray-300"
               }`}
               onClick={() => goToSlide(index)}
               aria-label={`Go to slide ${index + 1}`}
@@ -269,3 +269,7 @@ const ScrollableCardsSection = ({ imageOnRight, title, subtitle }: ScrollableCar
 };
 
 export default ScrollableCardsSection;
+
+
+
+

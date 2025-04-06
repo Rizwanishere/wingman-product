@@ -23,7 +23,7 @@ const FeatureCard = ({ title, description, linkText, linkHref, index = 0 }: Feat
           transition: { duration: 0.2 }
         }}
       >
-        <h3 className="text-xl font-semibold text-strata-darkBlue mb-3">{title}</h3>
+        <h3 className="text-xl font-semibold text-wingman-darkBlue mb-3">{title}</h3>
         <p className="text-gray-600 mb-4 flex-grow">{description}</p>
         {linkText && linkHref && (
           <motion.div
@@ -33,7 +33,7 @@ const FeatureCard = ({ title, description, linkText, linkHref, index = 0 }: Feat
           >
             <Link
               href={linkHref}
-              className="text-strata-blue hover:text-strata-darkBlue font-medium inline-flex items-center"
+              className="text-wingman-blue hover:text-wingman-darkBlue font-medium inline-flex items-center"
             >
               {linkText}
               <motion.span
@@ -86,7 +86,7 @@ const FeaturesSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-strata-lightGray">
+    <section className="py-20 bg-wingman-lightGray">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <AnimatedHeading className="section-heading mb-6">
@@ -120,3 +120,7 @@ const FeaturesSection = () => {
 };
 
 export default FeaturesSection;
+
+
+
+

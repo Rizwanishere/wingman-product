@@ -10,15 +10,15 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-strata-blue text-white shadow hover:bg-strata-darkBlue",
+          "bg-wingman-blue text-white shadow hover:bg-wingman-darkBlue",
         destructive:
           "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
         outline:
-          "border border-strata-blue text-strata-blue bg-transparent shadow-sm hover:bg-strata-blue/10",
+          "border border-wingman-blue text-wingman-blue bg-transparent shadow-sm hover:bg-wingman-blue/10",
         secondary:
           "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
-        ghost: "hover:bg-strata-blue/10 hover:text-strata-blue",
-        link: "text-strata-blue underline-offset-4 hover:underline",
+        ghost: "hover:bg-wingman-blue/10 hover:text-wingman-blue",
+        link: "text-wingman-blue underline-offset-4 hover:underline",
       },
       size: {
         default: "h-9 px-4 py-2",
@@ -55,3 +55,6 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 Button.displayName = "Button"
 
 export { Button, buttonVariants }
+
+
+

@@ -42,7 +42,7 @@ const CaseStudiesSection = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-strata-darkBlue mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-wingman-darkBlue mb-4">
             FRAUD PREVENTION CASE STUDIES
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -79,16 +79,16 @@ const CaseStudiesSection = () => {
                       />
                     </div>
                     <div className="p-6 flex flex-col">
-                      <span className="text-sm font-medium text-strata-blue mb-2">
+                      <span className="text-sm font-medium text-wingman-blue mb-2">
                         {study.category}
                       </span>
-                      <h3 className="text-xl font-semibold text-strata-darkBlue mb-3">
+                      <h3 className="text-xl font-semibold text-wingman-darkBlue mb-3">
                         {study.title}
                       </h3>
                       <p className="text-gray-600 mb-4">
                         {study.description}
                       </p>
-                      <Button variant="link" className="text-strata-blue p-0 h-auto font-medium flex items-center">
+                      <Button variant="link" className="text-wingman-blue p-0 h-auto font-medium flex items-center">
                         Read Case Study
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Button>
@@ -102,7 +102,7 @@ const CaseStudiesSection = () => {
           {/* Scroll Indicator Bar */}
           <div className="relative h-1 bg-gray-200 rounded-full mt-2 mb-6">
             <div 
-              className="absolute h-1 bg-strata-blue rounded-full transition-all duration-150 ease-out"
+              className="absolute h-1 bg-wingman-blue rounded-full transition-all duration-150 ease-out"
               style={{ width: `${scrollPercentage}%` }}
             ></div>
           </div>
@@ -129,16 +129,16 @@ const CaseStudiesSection = () => {
                   />
                 </div>
                 <div className="p-6 flex flex-col flex-grow">
-                  <span className="text-sm font-medium text-strata-blue mb-2">
+                  <span className="text-sm font-medium text-wingman-blue mb-2">
                     {study.category}
                   </span>
-                  <h3 className="text-xl font-semibold text-strata-darkBlue mb-3">
+                  <h3 className="text-xl font-semibold text-wingman-darkBlue mb-3">
                     {study.title}
                   </h3>
                   <p className="text-gray-600 mb-4 flex-grow">
                     {study.description}
                   </p>
-                  <Button variant="link" className="text-strata-blue p-0 h-auto font-medium flex items-center justify-start">
+                  <Button variant="link" className="text-wingman-blue p-0 h-auto font-medium flex items-center justify-start">
                     Read Case Study
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
@@ -153,3 +153,7 @@ const CaseStudiesSection = () => {
 };
 
 export default CaseStudiesSection;
+
+
+
+

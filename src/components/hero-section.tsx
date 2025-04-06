@@ -9,7 +9,7 @@ import { ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="relative w-full min-h-[80vh] flex flex-col justify-center bg-gradient-to-r from-strata-lightGray to-white overflow-hidden">
+    <section className="relative w-full min-h-[80vh] flex flex-col justify-center bg-gradient-to-r from-wingman-lightGray to-white overflow-hidden">
       <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Image - Will show first on mobile */}
@@ -35,7 +35,7 @@ const HeroSection = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-strata-darkBlue leading-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-wingman-darkBlue leading-tight">
                 World's-Leading<br />
                 Cybersecurity
               </h1>
@@ -59,7 +59,7 @@ const HeroSection = () => {
             >
               <Link href="/contact">
                 <Button
-                  className="bg-strata-blue hover:bg-strata-darkBlue text-white px-8 py-6 rounded-lg text-lg"
+                  className="bg-wingman-blue hover:bg-wingman-darkBlue text-white px-8 py-6 rounded-lg text-lg"
                 >
                   Contact Us
                 </Button>
@@ -67,7 +67,7 @@ const HeroSection = () => {
               <Link href="/contact">
                 <Button
                   variant="outline"
-                  className="border-strata-blue text-strata-blue hover:bg-strata-blue/10 px-8 py-6 rounded-lg text-lg"
+                  className="border-wingman-blue text-wingman-blue hover:bg-wingman-blue/10 px-8 py-6 rounded-lg text-lg"
                 >
                   Book a Demo
                   <ArrowRight className="ml-2 h-5 w-5" />
@@ -79,10 +79,14 @@ const HeroSection = () => {
       </div>
 
       {/* Background elements */}
-      <div className="absolute top-1/4 right-0 w-64 h-64 bg-strata-blue/5 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-1/4 left-0 w-72 h-72 bg-strata-lightBlue/5 rounded-full blur-3xl"></div>
+      <div className="absolute top-1/4 right-0 w-64 h-64 bg-wingman-blue/5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-1/4 left-0 w-72 h-72 bg-wingman-lightBlue/5 rounded-full blur-3xl"></div>
     </section>
   );
 };
 
 export default HeroSection;
+
+
+
+

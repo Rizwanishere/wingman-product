@@ -185,3 +185,4 @@ export const AnimatedStaggerItem = ({
     </motion.div>
   );
 };
+

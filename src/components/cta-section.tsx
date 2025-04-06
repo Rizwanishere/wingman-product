@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const CtaSection = () => {
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-r from-strata-blue to-strata-darkBlue">
+    <section className="py-16 md:py-24 bg-gradient-to-r from-wingman-blue to-wingman-darkBlue">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -30,7 +30,7 @@ const CtaSection = () => {
               >
                 <Link href="/contact">
                   <Button
-                    className="bg-white text-strata-darkBlue hover:bg-white/90 w-full sm:w-auto text-lg px-8 py-6 h-auto"
+                    className="bg-white text-wingman-darkBlue hover:bg-white/90 w-full sm:w-auto text-lg px-8 py-6 h-auto"
                   >
                     Book a Demo
                     <ArrowRight className="ml-2 h-5 w-5" />
@@ -44,7 +44,7 @@ const CtaSection = () => {
                 <Link href="/contact">
                   <Button
                     variant="outline"
-                    className="bg-white text-strata-darkBlue hover:bg-white/90 w-full sm:w-auto text-lg px-8 py-6 h-auto"
+                    className="bg-white text-wingman-darkBlue hover:bg-white/90 w-full sm:w-auto text-lg px-8 py-6 h-auto"
                   >
                     Learn More
                   </Button>
@@ -59,3 +59,4 @@ const CtaSection = () => {
 };
 
 export default CtaSection;
+

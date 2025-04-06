@@ -43,7 +43,7 @@ export default {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
-        strata: {
+        wingman: {
           blue: '#3b82f6',
           darkBlue: '#1e40af',
           lightBlue: '#93c5fd',

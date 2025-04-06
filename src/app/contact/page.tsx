@@ -59,7 +59,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="py-16 md:py-24 bg-strata-lightGray">
+    <section className="py-16 md:py-24 bg-wingman-lightGray">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -68,7 +68,7 @@ const Contact = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-strata-darkBlue mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-wingman-darkBlue mb-4">
             Contact Us
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -85,7 +85,7 @@ const Contact = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="bg-white rounded-xl shadow-md p-8"
           >
-            <h3 className="text-2xl font-semibold text-center text-strata-darkBlue mb-6">Send Us a Message</h3>
+            <h3 className="text-2xl font-semibold text-center text-wingman-darkBlue mb-6">Send Us a Message</h3>
             {submitStatus === 'success' ? (
               <div className="flex flex-col items-center justify-center space-y-4 py-8 mt-16">
                 <CheckCircle2 className="w-16 h-16 text-green-500" />
@@ -93,7 +93,7 @@ const Contact = () => {
                 <p className="text-gray-600 text-center">Thank you for contacting us. We'll get back to you soon.</p>
                 <Button 
                   onClick={() => setSubmitStatus(null)}
-                  className="bg-strata-blue hover:bg-strata-darkBlue text-white"
+                  className="bg-wingman-blue hover:bg-wingman-darkBlue text-white"
                 >
                   Send Another Message
                 </Button>
@@ -119,7 +119,7 @@ const Contact = () => {
                       value={formData.name}
                       onChange={handleInputChange}
                       placeholder="Your full name"
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-strata-blue focus:border-strata-blue outline-none transition-colors"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-wingman-blue focus:border-wingman-blue outline-none transition-colors"
                     />
                   </div>
                   <div>
@@ -134,7 +134,7 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleInputChange}
                       placeholder="Your email address"
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-strata-blue focus:border-strata-blue outline-none transition-colors"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-wingman-blue focus:border-wingman-blue outline-none transition-colors"
                     />
                   </div>
                 </div>
@@ -150,7 +150,7 @@ const Contact = () => {
                     value={formData.subject}
                     onChange={handleInputChange}
                     placeholder="Subject of your message"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-strata-blue focus:border-strata-blue outline-none transition-colors"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-wingman-blue focus:border-wingman-blue outline-none transition-colors"
                   />
                 </div>
                 <div>
@@ -165,13 +165,13 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleInputChange}
                     placeholder="Your message"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-strata-blue focus:border-strata-blue outline-none transition-colors"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-wingman-blue focus:border-wingman-blue outline-none transition-colors"
                   ></textarea>
                 </div>
                 <Button 
                   type="submit"
                   disabled={isSubmitting}
-                  className="bg-strata-blue hover:bg-strata-darkBlue text-white w-full py-6"
+                  className="bg-wingman-blue hover:bg-wingman-darkBlue text-white w-full py-6"
                 >
                   {isSubmitting ? 'Sending...' : 'Send Message'}
                 </Button>
@@ -188,26 +188,26 @@ const Contact = () => {
             className="flex flex-col justify-between"
           >
             <div className="bg-white rounded-xl shadow-md p-8 mb-8">
-              <h3 className="text-2xl font-semibold text-strata-darkBlue mb-6">Contact Information</h3>
+              <h3 className="text-2xl font-semibold text-wingman-darkBlue mb-6">Contact Information</h3>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="bg-strata-blue/10 rounded-full p-3 text-strata-blue">
+                  <div className="bg-wingman-blue/10 rounded-full p-3 text-wingman-blue">
                     <Mail size={24} />
                   </div>
                   <div>
-                    <h4 className="text-lg font-medium text-strata-darkBlue">Email</h4>
-                    <a href="mailto:support@wingmanproduct.com" className="text-gray-600 hover:text-strata-blue">
+                    <h4 className="text-lg font-medium text-wingman-darkBlue">Email</h4>
+                    <a href="mailto:support@wingmanproduct.com" className="text-gray-600 hover:text-wingman-blue break-all">
                       support@wingmanproduct.com
                     </a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="bg-strata-blue/10 rounded-full p-3 text-strata-blue">
+                  <div className="bg-wingman-blue/10 rounded-full p-3 text-wingman-blue">
                     <Mail size={24} />
                   </div>
                   <div>
-                    <h4 className="text-lg font-medium text-strata-darkBlue">Demo</h4>
-                    <a href="mailto:demo@wingmanproduct.com" className="text-gray-600 hover:text-strata-blue">
+                    <h4 className="text-lg font-medium text-wingman-darkBlue">Demo</h4>
+                    <a href="mailto:demo@wingmanproduct.com" className="text-gray-600 hover:text-wingman-blue break-all">
                       demo@wingmanproduct.com
                     </a>
                   </div>
@@ -215,10 +215,10 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="bg-strata-blue rounded-xl shadow-md p-8 text-white">
+            <div className="bg-wingman-blue rounded-xl shadow-md p-8 text-white">
               <h3 className="text-xl font-semibold mb-4">Need Immediate Assistance?</h3>
               <p className="mb-6">Our cybersecurity experts are available to help you with any questions or security concerns.</p>
-              <Button variant="outline" className="border-white bg-white text-strata-darkBlue hover:text-white w-full">
+              <Button variant="outline" className="border-white bg-white text-wingman-darkBlue hover:text-white w-full">
                 Chat With Support
               </Button>
             </div>
@@ -230,3 +230,5 @@ const Contact = () => {
 };
 
 export default Contact;
+
+

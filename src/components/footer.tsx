@@ -29,7 +29,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-strata-darkBlue text-white">
+    <footer className="bg-wingman-darkBlue text-white">
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Company Info */}
@@ -142,13 +142,13 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-6">Contact Us</h3>
             <ul className="space-y-4">
               <li className="flex items-center gap-3">
-                <Mail className="text-strata-blue" size={18} />
+                <Mail className="text-wingman-blue" size={18} />
                 <span className="text-white/70 hover:text-white transition-colors cursor-pointer">
                   support@wingmanproduct.com
                 </span>
               </li>
               <li className="flex items-center gap-3">
-                <Mail className="text-strata-blue" size={18} />
+                <Mail className="text-wingman-blue" size={18} />
                 <span className="text-white/70 hover:text-white transition-colors cursor-pointer">
                   demo@wingmanproduct.com
                 </span>
@@ -181,3 +181,4 @@ const Footer = () => {
 };
 
 export default Footer;
+

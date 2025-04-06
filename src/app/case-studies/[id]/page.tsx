@@ -26,7 +26,7 @@ export default async function CaseStudyPage(props: {
         <div className="max-w-4xl mx-auto">
           <Link
             href="/#case-studies"
-            className="inline-flex items-center text-strata-blue hover:text-strata-darkBlue mb-8 group"
+            className="inline-flex items-center text-wingman-blue hover:text-wingman-darkBlue mb-8 group"
           >
             <ArrowLeft className="h-5 w-5 mr-2 transition-transform group-hover:-translate-x-1" />
             Back to Case Studies
@@ -45,10 +45,10 @@ export default async function CaseStudyPage(props: {
 
             <div className="p-8 md:p-12">
               <div className="mb-8">
-                <span className="inline-block px-4 py-2 rounded-full bg-strata-blue/10 text-strata-blue text-sm font-medium mb-4">
+                <span className="inline-block px-4 py-2 rounded-full bg-wingman-blue/10 text-wingman-blue text-sm font-medium mb-4">
                   {caseStudy.category}
                 </span>
-                <h1 className="text-3xl md:text-4xl font-bold text-strata-darkBlue mb-4">
+                <h1 className="text-3xl md:text-4xl font-bold text-wingman-darkBlue mb-4">
                   {caseStudy.title}
                 </h1>
               </div>

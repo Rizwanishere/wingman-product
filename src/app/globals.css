@@ -68,10 +68,10 @@
   }
 }
 
-/* Custom Strata Font Styles */
+/* Custom Wingman Font Styles */
 @layer components {
   .gradient-bg {
-    @apply bg-gradient-to-br from-strata-darkBlue via-strata-blue to-strata-lightBlue;
+    @apply bg-gradient-to-br from-wingman-darkBlue via-wingman-blue to-wingman-lightBlue;
   }
 
   .hero-heading {
@@ -79,10 +79,11 @@
   }
 
   .section-heading {
-    @apply text-3xl md:text-4xl font-bold text-strata-darkBlue;
+    @apply text-3xl md:text-4xl font-bold text-wingman-darkBlue;
   }
 
   .sub-heading {
-    @apply text-xl md:text-2xl font-semibold text-strata-darkBlue;
+    @apply text-xl md:text-2xl font-semibold text-wingman-darkBlue;
   }
 }
+

@@ -33,14 +33,14 @@ const UseCaseCard = ({
         </div>
       )}
       <CardContent className="flex-grow p-6">
-        <h3 className="text-xl font-semibold text-strata-darkBlue mb-3">{title}</h3>
+        <h3 className="text-xl font-semibold text-wingman-darkBlue mb-3">{title}</h3>
         <p className="text-gray-600">{description}</p>
       </CardContent>
       <CardFooter className="px-6 pb-6 pt-0">
         <Button
           asChild
           variant="outline"
-          className="text-strata-blue border-strata-blue hover:bg-strata-blue/10 w-full"
+          className="text-wingman-blue border-wingman-blue hover:bg-wingman-blue/10 w-full"
         >
           <Link href={ctaLink}>{ctaText}</Link>
         </Button>
@@ -71,7 +71,7 @@ const UseCasesSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-strata-lightGray">
+    <section className="py-20 bg-wingman-lightGray">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="section-heading mb-6">How will you use your identity fabric?</h2>
@@ -93,7 +93,7 @@ const UseCasesSection = () => {
         <div className="mt-12 text-center">
           <Button
             asChild
-            className="bg-strata-blue hover:bg-strata-darkBlue text-white px-6"
+            className="bg-wingman-blue hover:bg-wingman-darkBlue text-white px-6"
           >
             <Link href="/demo">Get a demo</Link>
           </Button>
@@ -104,3 +104,6 @@ const UseCasesSection = () => {
 };
 
 export default UseCasesSection;
+
+
+
