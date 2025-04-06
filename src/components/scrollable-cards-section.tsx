@@ -82,7 +82,7 @@ const ScrollableCardsSection = ({ imageOnRight, title, subtitle }: ScrollableCar
         transition={{ duration: 0.5, delay: 0.1 }}
       >
         <p className="text-lg text-gray-600 mb-8">
-          Our security systems utilize Distributed computing, Artificial Intelligence, and Distributed ledger technology to identify and neutralize threats in real-time.
+          <span className="text-wingman-blue">Wingman</span> is a suite of identity and fraud prevention tools for both digital and non-digital channels. It integrates seamlessly into your ecosystem, offering insights through silent monitoring or acting as a proactive security layer across pre and post-authentication stages.
         </p>
       </motion.div>
 
@@ -94,22 +94,22 @@ const ScrollableCardsSection = ({ imageOnRight, title, subtitle }: ScrollableCar
       >
         <ul className="space-y-4">
           <li className="flex items-start gap-2">
-            <div className="h-6 w-6 rounded-full bg-wingman-blue/20 flex items-center justify-center mt-1">
+            <div className="h-6 w-6 flex-shrink-0 rounded-full bg-wingman-blue/20 flex items-center justify-center">
               <div className="h-3 w-3 rounded-full bg-wingman-blue"></div>
             </div>
-            <p className="text-gray-700">Real-time threat detection and prevention</p>
+            <p className="text-gray-700"><span className="text-wingman-blue">Flexible:</span> Map business rules to any payload attribute and edit responses in real time..</p>
           </li>
           <li className="flex items-start gap-2">
-            <div className="h-6 w-6 rounded-full bg-wingman-blue/20 flex items-center justify-center mt-1">
+            <div className="h-6 w-6 flex-shrink-0 rounded-full bg-wingman-blue/20 flex items-center justify-center">
               <div className="h-3 w-3 rounded-full bg-wingman-blue"></div>
             </div>
-            <p className="text-gray-700">AI-powered adaptive security measures</p>
+            <p className="text-gray-700"><span className="text-wingman-blue">Highly Scalable:</span> Handles high data loads using distributed computing and Kubernetes..</p>
           </li>
           <li className="flex items-start gap-2">
-            <div className="h-6 w-6 rounded-full bg-wingman-blue/20 flex items-center justify-center mt-1">
+            <div className="h-6 w-6 flex-shrink-0 rounded-full bg-wingman-blue/20 flex items-center justify-center">
               <div className="h-3 w-3 rounded-full bg-wingman-blue"></div>
             </div>
-            <p className="text-gray-700">Comprehensive fraud prevention and detection</p>
+            <p className="text-gray-700"><span className="text-wingman-blue">AI Powered:</span> Uses ML and Gen AI for behavior modeling and dynamic orchestration..</p>
           </li>
         </ul>
       </motion.div>
@@ -119,7 +119,7 @@ const ScrollableCardsSection = ({ imageOnRight, title, subtitle }: ScrollableCar
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.3 }}
-        className="pt-4"
+        className="pt-6"
       >
         <Button className="bg-wingman-blue hover:bg-wingman-darkBlue text-white" asChild>
           <Link href="/contact">Learn More</Link>
@@ -129,7 +129,7 @@ const ScrollableCardsSection = ({ imageOnRight, title, subtitle }: ScrollableCar
   );
 
   const cardsContent = (
-    <div className="relative">
+    <div className="relative pt-10">
       <div className="overflow-hidden rounded-xl">
         <div
           className="flex transition-transform duration-300 ease-in-out"

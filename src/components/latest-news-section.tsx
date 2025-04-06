@@ -43,7 +43,7 @@ const LatestNewsSection = () => {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-wingman-darkBlue mb-4">
-            Latest News
+            Latest Articles
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             See what's happening in the Identity and Security sector right now

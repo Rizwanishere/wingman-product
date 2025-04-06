@@ -40,7 +40,7 @@ const Footer = () => {
               </svg>
             </div>
             <p className="text-white/70 mb-6">
-              Experience lightning – fast response times and exceptional reliability for a secure and protected online journey.
+              An AI powered distributed computing platform for Identity safeguarding and Fraud prevention.
             </p>
             <div className="flex space-x-4">
               <span className="text-white/70 hover:text-white transition-colors cursor-pointer">

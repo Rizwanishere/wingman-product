@@ -7,7 +7,7 @@ import Footer from "@/components/footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Wingman - World's-Leading Cybersecurity",
+  title: "Wingman | World's Leading Cybersecurity",
   description: "Experience lightning-fast response times and exceptional reliability for a secure and protected online journey.",
   icons: {
     icon: '/wingmanIcon.png',

@@ -47,7 +47,7 @@ const HeroSection = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <p className="text-lg md:text-xl text-gray-600 max-w-xl">
-                Experience lightning - fast response times and exceptional reliability for a secure and protected online journey.
+              An AI powered distributed computing platform for Identity safeguarding and Fraud prevention.
               </p>
             </motion.div>
 
