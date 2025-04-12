@@ -24,8 +24,8 @@ const Header = () => {
   const pathname = usePathname();
   const router = useRouter();
 
-  // Add news items data
-  const newsItems = [
+  // Add articles items data
+  const articlesItems = [
     {
       id: 1,
       title: "Synthetic Fraud Detection",
@@ -286,12 +286,12 @@ const Header = () => {
                       Contact Us
                     </Link>
 
-                    {/* Latest News Section */}
+                    {/* Latest Articles Section */}
                     <div className="py-4">
-                      <h3 className="text-lg font-semibold text-wingman-darkBlue mb-4">Latest News</h3>
+                      <h3 className="text-lg font-semibold text-wingman-darkBlue mb-4">Latest Articles</h3>
                       <div className="overflow-x-auto">
                         <div className="flex gap-4 pb-4" style={{ scrollSnapType: 'x mandatory' }}>
-                          {newsItems.map((item) => (
+                          {articlesItems.map((item) => (
                             <div
                               key={item.id}
                               className="flex-none w-[280px] bg-white rounded-xl shadow-md overflow-hidden"

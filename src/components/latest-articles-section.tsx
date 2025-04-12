@@ -6,9 +6,9 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import { useRef, useState, useEffect } from "react";
-import { newsItems } from "@/data/news-items";
+import { articlesItems } from "@/data/articles-items";
 
-const LatestNewsSection = () => {
+const LatestArticlesSection = () => {
   const scrollContainerRef = useRef<HTMLDivElement | null>(null);
   const [scrollPercentage, setScrollPercentage] = useState(0);
   
@@ -33,7 +33,7 @@ const LatestNewsSection = () => {
   }, []);
 
   return (
-    <section id="latest-news" className="py-16 md:py-24 bg-gray-50">
+    <section id="latest-articles" className="py-16 md:py-24 bg-gray-50">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -59,7 +59,7 @@ const LatestNewsSection = () => {
             onScroll={handleScroll}
           >
             <div className="flex px-4 space-x-6" style={{ minWidth: "min-content" }}>
-              {newsItems.map((item, index) => (
+              {articlesItems.map((item, index) => (
                 <motion.div
                   key={item.id}
                   initial={{ opacity: 0, y: 20 }}
@@ -69,7 +69,7 @@ const LatestNewsSection = () => {
                   className="bg-white rounded-xl shadow-md overflow-hidden flex-shrink-0"
                   style={{ width: "300px" }}
                 >
-                  <Link href={`/news/${item.id}`} className="flex flex-col h-full">
+                  <Link href={`/articles/${item.id}`} className="flex flex-col h-full">
                     <div className="relative h-48">
                       <Image
                         src={item.imageUrl}
@@ -115,7 +115,7 @@ const LatestNewsSection = () => {
 
         {/* Desktop: Grid Layout */}
         <div className="hidden md:grid md:grid-cols-2 gap-8">
-          {newsItems.map((item, index) => (
+          {articlesItems.map((item, index) => (
             <motion.div
               key={item.id}
               initial={{ opacity: 0, y: 20 }}
@@ -124,7 +124,7 @@ const LatestNewsSection = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-white rounded-xl shadow-md overflow-hidden h-full flex flex-col"
             >
-              <Link href={`/news/${item.id}`} className="flex flex-col h-full">
+              <Link href={`/articles/${item.id}`} className="flex flex-col h-full">
                 <div className="relative h-48">
                   <Image
                     src={item.imageUrl}
@@ -162,7 +162,7 @@ const LatestNewsSection = () => {
   );
 };
 
-export default LatestNewsSection;
+export default LatestArticlesSection;
 
 
 

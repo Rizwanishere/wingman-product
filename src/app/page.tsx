@@ -4,7 +4,7 @@ import PartnersSection from "@/components/partners-section";
 import CtaSection from "@/components/cta-section";
 import ScrollableCardsSection from "@/components/scrollable-cards-section";
 import FaqSection from "@/components/faq-section";
-import LatestNewsSection from "@/components/latest-news-section";
+import LatestArticlesSection from "@/components/latest-articles-section";
 import FeatureCardSection from "@/components/feature-card-section";
 import LargeWideBanner from "@/components/large-wide-banner";
 
@@ -31,8 +31,8 @@ export default function Home() {
       {/* Case Studies Section */}
       <CaseStudiesSection />
 
-      {/* Latest News Section */}
-      <LatestNewsSection />
+      {/* Latest Articles Section */}
+      <LatestArticlesSection />
 
       {/* FAQ Section */}
       <FaqSection />
