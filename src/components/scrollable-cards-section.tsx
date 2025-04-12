@@ -42,7 +42,29 @@ const ScrollableCardsSection = ({ imageOnRight, title, subtitle }: ScrollableCar
         id: 5,
         title: "Enhanced Access Control",
         description: "Intent based access control enabling smart decision to step when required during the session. Capabilities to revoke OAuth tokens and real time blocking across channels."
+      },
+      {
+        id: 6,
+        title: "Seamless Integration",
+        description: "Proxy-based integration with attribute extractor in payload request and response."
+      },
+      {
+        id: 7,
+        title: "AI Enabled",
+        description: "Use of AI for dynamic content generation, anomaly detection, and intelligent flow orchestration."
+      },
+      {
+        id: 8,
+        title: "Device Profiling",
+        description: "Creation of unique fingerprint based on device or browser attributes."
+      },
+      {
+        id: 9,
+        title: "Geo-location Monitoring",
+        description: "Detect customer location and ISP based on Geo, VPN, and TOR data."
       }
+      
+
     ]
   };
 
@@ -153,6 +175,16 @@ const ScrollableCardsSection = ({ imageOnRight, title, subtitle }: ScrollableCar
                           ? "https://cdn.letterdrop.co/images/2023/9/28/nextdlp/orq6z6kt40.jpeg"
                           : card.id === 4
                           ? "https://ranksparrow.com/wp-content/uploads/2023/09/img-HardwareSoftware-Resale.jpg"
+                          : card.id === 6
+                          ? "https://eu-images.contentstack.com/v3/assets/blt2db30e0332fda6df/bltfcc2ce12227fd6d1/67473ea2e6cc872b5d701c74/cybersecurity.jpg?width=1280&auto=webp&quality=95&format=jpg&disable=upscale"
+                          : card.id === 7
+                          ? "https://img.freepik.com/premium-vector/abstract-circuit-connection-modern-system-ai-system-artificial-intelligence-mechanism-blue-digital_36402-1059.jpg"
+                          : card.id === 8
+                          ? "https://www.securitymagazine.com/ext/resources/Issues/2019/September/SEC0919-Mobile-Feat-slide1_900px.jpg?height=635&t=1567784812&width=1200"
+                          : card.id === 9
+                          ? "https://t3.ftcdn.net/jpg/10/38/09/06/360_F_1038090621_JX9vA5AjwcdTQ5qD1GUvtEWgG6jRKPVY.jpg"
+                          : card.id === 10
+                          ? "https://media.licdn.com/dms/image/D5612AQHymOIQ9SRZKA/article-cover_image-shrink_720_1280/0/1702283459648?e=2147483647&v=beta&t=7iFcv5By9TnyjGogKFEYgz50iYF-bctfn0w1B2dQH6Q"
                           : "https://logicalnetworksolution.com/wp-content/uploads/2024/05/8-1280x698.png"
                       ) : (
                         card.id === 1
