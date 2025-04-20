@@ -7,94 +7,143 @@ export type ArticlesItems = {
   imageUrl: string;
   content: Array<
     | {
-        type: 'heading' | 'paragraph';
-        text: string;
-      }
+      type: 'heading' | 'paragraph';
+      text: string;
+    }
     | {
-        type: 'list';
-        items: string[];
-      }
+      type: 'list';
+      items: string[];
+    }
   >;
 };
 
 export const articlesItems: ArticlesItems[] = [
   {
-    id: 1,
-    title: "Synthetic Fraud Detection",
-    date: "March 15, 2024",
-    excerpt: "Synthetic identity fraud is a type of identity theft in which a criminal combines both real and fake personal information to create a new, fictious identity that can then be used for various identity-related schemes, such as credit card fraud, bank fraud, and more.",
-    category: "Security Insights",
-    imageUrl: "https://www.socure.com/_next/image?url=https%3A%2F%2Fmedia.socure.com%2Fapp%2Fuploads%2F2024%2F12%2FProducts_SigmaSyntheticFraud.webp&w=3840&q=75",
-    content: [
+    "id": 1,
+    "title": "FRAUD PREVENTION USING PROXY: ENVOY & WEBASSEMBLY",
+    "date": "April 20, 2025",
+    "excerpt": "A modular, plug-and-play fraud detection pipeline powered by Envoy Proxy, Rust-based WebAssembly filters, and Wingman—a real-time fraud detection engine delivering sub-millisecond decisioning speed.",
+    "category": "Fraud Prevention",
+    "imageUrl": "https://www.researchdive.com/blogImages/OtGmhpxDz1.jpeg",
+    "content": [
       {
-        type: 'paragraph',
-        text: 'Synthetic identity fraud has become one of the fastest-growing types of financial crimes in recent years. This sophisticated form of fraud poses a significant threat to both financial institutions and consumers.'
+        "type": "heading",
+        "text": "Abstract"
       },
       {
-        type: 'heading',
-        text: 'What is Synthetic Identity Fraud?'
+        "type": "paragraph",
+        "text": "A modular, plug-and-play fraud detection pipeline, powered by Envoy Proxy (as a reverse proxy), Rust-based WebAssembly filters (for lightweight inspection and policy enforcement), and Wingman—a real-time fraud detection and prevention engine delivering sub-millisecond decisioning speed. Vendor-agnostic, high-performance fraud firewall that can be deployed in front of any IAM or identity system, intercepting threats before they impact the business."
       },
       {
-        type: 'list',
-        items: [
-          'Open new credit card accounts',
-          'Apply for loans',
-          'Make fraudulent purchases',
-          'Commit various other financial crimes'
+        "type": "heading",
+        "text": "Introduction"
+      },
+      {
+        "type": "paragraph",
+        "text": "Security teams are under pressure to deliver both immediate threat response and frictionless customer experiences. Traditional IAM solutions offer limited extensibility, often bundling fraud modules as part of closed suites. Wingman, combined with Envoy Proxy and Rust/WASM filters, offers an independent, scalable alternative. It sits transparently in front of your application, enabling real-time decisions—without touching a line of app code."
+      },
+      {
+        "type": "heading",
+        "text": "Envoy Proxy: The Modern Reverse Proxy"
+      },
+      {
+        "type": "paragraph",
+        "text": "Originally developed by Lyft, Envoy Proxy is a high-performance edge and service proxy that powers modern service meshes and microservices."
+      },
+      {
+        "type": "heading",
+        "text": "Why Envoy for Fraud Detection?"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Acts as a transparent gateway for all incoming requests",
+          "Enables inline request inspection via WASM filters",
+          "Language-agnostic: Works with Java, Python, Node, etc.",
+          "Deployment-flexible: Runs in containers, VMs, or bare metal"
         ]
       },
       {
-        type: 'heading',
-        text: 'Detection Challenges:'
+        "type": "heading",
+        "text": "WebAssembly + Rust: Programmable Inline Filtering"
       },
       {
-        type: 'list',
-        items: [
-          'Traditional verification methods often fail to catch synthetic identities',
-          'Fraudsters patiently build credit histories for these fake identities',
-          'The presence of some legitimate information makes detection complex',
-          'Standard fraud detection systems may not flag these accounts initially'
+        "type": "paragraph",
+        "text": "WebAssembly enables safe, high-performance code execution in sandboxed environments like Envoy."
+      },
+      {
+        "type": "heading",
+        "text": "Why Rust?"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Memory-safe and thread-safe by design",
+          "Fast execution, ideal for sub-rms decisions",
+          "Great ecosystem for compiling to WASM (cargo-wasi, wasmitime)"
         ]
       },
       {
-        type: 'heading',
-        text: 'Prevention Strategies:'
+        "type": "heading",
+        "text": "Wingman"
       },
       {
-        type: 'list',
-        items: [
-          'Advanced Data Analytics',
-          'Machine Learning Models',
-          'Pattern Recognition',
-          'Identity Verification Technologies',
-          'Cross-institutional Collaboration'
+        "type": "paragraph",
+        "text": "Wingman is a cybersecurity platform purpose-built for real-time identity fraud detection and prevention."
+      },
+      {
+        "type": "heading",
+        "text": "What Sets Wingman Apart"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Lightning-fast decisions: sub-millisecond response times",
+          "Zero-latency customer experience",
+          "API-first design: Easily called from Envoy filters",
+          "Works with any IAM: Okta, Ping, Auth0, custom systems",
+          "Pre-authentication protection: Stop bots before they even reach IAM"
         ]
       },
       {
-        type: 'heading',
-        text: 'The Future of Prevention:'
+        "type": "heading",
+        "text": "Wingman in the Architecture"
       },
       {
-        type: 'paragraph',
-        text: 'As synthetic fraud continues to evolve, so must our detection and prevention methods. Financial institutions are increasingly turning to AI and machine learning to spot patterns and anomalies that might indicate synthetic identities.'
+        "type": "paragraph",
+        "text": "Client → Envoy Proxy (WASM filter) → Wingman API\nRisk score + action\nAllow / Step-up / Block request"
       },
       {
-        type: 'heading',
-        text: 'The Role of Technology:'
+        "type": "heading",
+        "text": "Example Use Cases"
       },
       {
-        type: 'list',
-        items: [
-          'Behavioral biometrics',
-          'Device intelligence',
-          'Document verification',
-          'Network analysis',
-          'Real-time monitoring'
+        "type": "list",
+        "items": [
+          "Login Protection: Block bots and brute-force attempts",
+          "MFA Enforcement: Step-up risk-based MFA only when needed",
+          "Early Threat Detection: Flag suspicious devices or behaviors before reaching app",
+          "Defense in Depth: Adds a fraud layer before IAM and backend"
         ]
       },
       {
-        type: 'paragraph',
-        text: 'By implementing these advanced detection methods and staying vigilant, organizations can better protect themselves and their customers from synthetic identity fraud.'
+        "type": "heading",
+        "text": "Benefits"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Zero App Change: Works as a reverse proxy; no code modifications",
+          "Real-Time Protection: Inline fraud decisioning under 1ms",
+          "Flexible: Works across any stack and IAM",
+          "Scalable: Container-ready, horizontally scalable",
+          "Secure: Leverages WASM sandboxing and Rust safety",
+          "Customizable: Extend filters with new logic as needed"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "The combination of Envoy + WebAssembly + Wingman unlocks a new paradigm of real-time, flexible, and independent fraud prevention. You don’t need to replace your IAM. You don’t need to modify your applications. You just need to run Envoy in front, inject a WASM filter, and let Wingman do the rest. It’s fraud prevention—simplified, accelerated, and production–ready."
       }
     ]
   },
