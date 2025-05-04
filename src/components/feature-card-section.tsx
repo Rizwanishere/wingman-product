@@ -134,7 +134,7 @@ const FeatureCardSection = () => {
             {/* Image - Will show first on mobile */}
             <div className="relative h-full min-h-[300px] order-first md:order-2">
               <Image
-                src="https://f.hubspotusercontent40.net/hubfs/8976995/AdobeStock_426570472.jpeg"
+                src="https://www.montrealinternational.com/app/uploads/2019/03/cybersecurity-montreal-1.jpg"
                 alt="Wingman Product Services"
                 fill
                 className="object-cover"

@@ -59,7 +59,7 @@ export const caseStudies: CaseStudy[] = [
     title: "Dynamic attribute extraction",
     category: "FRAUD PREVENTION",
     description: "Capability to tap inbound data and extract meaningful information out of it, reducing integration footprint.",
-    imageUrl: "https://www.xpand-it.com/wp-content/uploads/2022/08/Fraude_blog-1.png",
+    imageUrl: "https://www.datavisor.com/wp-content/uploads/2020/12/Featured.jpg",
     fullContent: `Our dynamic attribute extraction system revolutionizes how businesses process and analyze inbound data streams for fraud prevention.
 
     Key Features:
